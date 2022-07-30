@@ -149,17 +149,20 @@ async function startSatganzDevs() {
 
                 if (anu.action == 'add') {
                 	let buttons = [
-                    {buttonId: `hi`, buttonText: {displayText: 'Welcome '}, type: 1}]
+                    {buttonId: `hi`, buttonText: {displayText: 'Welcome '}, type: 1},
+                    {buttonId: `hi`, buttonText: {displayText: '\n\n\n\n\n Iam LGBT'}, type: 1}]
                 let buttonMessage = {
                     image: { url: ppuser },
-                    caption: `@${num.split("@")[0]} Leaving From ${metadata.subject}`,
+                    caption: `Welcome To ${metadata.subject} @${num.split("@")[0]} 🔥`,
                     footer: 'Good Bye Message',
                     buttons: buttons,
                     headerType: 5
                 }
                     SatganzDevs.sendMessage(anu.id, buttonMessage)
                 } else if (anu.action == 'remove') {
-                	let buttons = [{buttonId: `hi`, buttonText: {displayText: 'Good Bye! '}, type: 1}]
+                	let buttons = [
+                      {buttonId: `hi`, buttonText: {displayText: 'Good Bye! '}, type: 1},
+                      {buttonId: `hi`, buttonText: {displayText: '\n\n\n\n\n Iam LGBT'}, type: 1}]
                 let buttonMessage = {
                     image: { url: ppuser },
                     caption: `@${num.split("@")[0]} Leaving From ${metadata.subject}`,

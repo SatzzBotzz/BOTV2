@@ -33,8 +33,6 @@ let tebakkalimat = db.data.game.kalimat = []
 let tebaklirik = db.data.game.lirik = []
 let tebaktebakan = db.data.game.tebakan = []
 let vote = db.data.others.vote = []
-const ranmot =["( ͡• ͜ʖ ͡•)","(っ ͡❛ ͜ʖ ͡❛)っ","≧ ͡❛ ͜ʖ ͡❛≦","ʕ( ͡❛ ͜ʖ ͡❛)ʔ","（‐＾▽＾‐）","(✿◠‿◠)","(─‿‿─)","(¬‿¬)"]
-const ranmote = ranmot[Math.floor(Math.random() * ranmot.length)]
 module.exports = SatganzDevs = async (SatganzDevs, m, chatUpdate, store) => {
     try {
         var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
@@ -3947,7 +3945,7 @@ SatganzDevs.sendMessage(`${terern}@s.whatsapp.net`, {text:spar})
 break
 case 'carbon':{
 	if (!text) throw m.reply('Input text')
-	let res = await fetch(`https://api-rull.herokuapp.com/api/cmd?code=${q}`)
+	let res = await fetchJson(`https://api-rull.herokuapp.com/api/cmd?code=${q}`)
 	if (res.status !== 200) throw m.reply(`To long!`)
 	SatganzDevs.sendMessage(m.chat, { image: { url: res.url }}, { quoted: fgclink })
 	}
