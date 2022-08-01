@@ -57,7 +57,7 @@ module.exports = satria = async (satria, m, chatUpdate, store) => {
         const isMedia = /image|video|sticker|audio/.test(mime)
         
 	     //Thumnail by satria
-const thumby = { url : "https://zenzapis.xyz/randomanime/v2/gremory?apikey=satria" }
+const thumb = { url : "https://zenzapis.xyz/randomanime/v2/gremory?apikey=satganzdevs" }
 const vitum= { url : global.visoka }
         // Group
         const groupMetadata = m.isGroup ? await satria.groupMetadata(m.chat).catch(e => {}) : ''
@@ -67,22 +67,74 @@ const vitum= { url : global.visoka }
     	const isBotAdmins = m.isGroup ? groupAdmins.includes(botNumber) : false
     	const isAdmins = m.isGroup ? groupAdmins.includes(m.sender) : false
     	const isPremium = isCreator || global.premium.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) || false
-    const ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us"}, "message": {orderMessage: {itemCount: 99999999,status: 200, thumbnail: thumby, surface: 200, message: `© ${global.ownername}`, orderTitle: 'Satganz Devs', sellerJid: '6281316701742@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
-    const fdoc = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `© ${ownername}`,jpegThumbnail: thumby}}}
+    const ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us"}, "message": {orderMessage: {itemCount: 99999999,status: 200, thumbnail: thumb, surface: 200, message: `© ${global.ownername}`, orderTitle: 'Satganz Devs', sellerJid: '6281316701742@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+    const fdoc = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `© ${ownername}`,jpegThumbnail: thumb}}}
 		const fvn = {key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: { "audioMessage": {"mimetype":"audio/ogg; codecs=opus","seconds":100000000000,"ptt": "true"}} } 
-		const fgif = {key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "status@broadcast" } : {})},message: {"videoMessage": { "title":`© ${global.ownername}`, "h": `satria`,'seconds': '359996400', 'gifPlayback': 'true', 'caption': `© ${global.ownername}`, 'jpegThumbnail': thumby}}}
-		const fgclink = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "https://chat.whatsapp.com/C2jcPPu4x4PItUFAvx1bgn","groupName": "Satganz Devs Ofc", "caption": `© ${global.ownername}`, 'jpegThumbnail': thumby}}}
-		const fvideo = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`${pushname}`, "h": `Hmm`,'seconds': '359996400', 'caption': `${pushname}`, 'jpegThumbnail': thumby}}}
-		const floc = {key : {participant : '6281316701742@s.whatsapp.net'},message: {locationMessage: {name: `${ownername}`,jpegThumbnail: thumby}}}
-		const fkontak = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `6283136505591-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `${pushname}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': thumby, thumbnail: thumby,sendEphemeral: true}}}
+		const fgif = {key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "status@broadcast" } : {})},message: {"videoMessage": { "title":`© ${global.ownername}`, "h": `satria`,'seconds': '359996400', 'gifPlayback': 'true', 'caption': `© ${global.ownername}`, 'jpegThumbnail': thumb}}}
+		const fgclink = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "https://chat.whatsapp.com/C2jcPPu4x4PItUFAvx1bgn","groupName": "Satganz Devs Ofc", "caption": `© ${global.ownername}`, 'jpegThumbnail': thumb}}}
+		const fvideo = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`${pushname}`, "h": `Hmm`,'seconds': '359996400', 'caption': `${pushname}`, 'jpegThumbnail': thumb}}}
+		const floc = {key : {participant : '6281316701742@s.whatsapp.net'},message: {locationMessage: {name: `${ownername}`,jpegThumbnail: thumb}}}
+		const fkontak = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `6283136505591-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `${pushname}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': thumb, thumbnail: thumb,sendEphemeral: true}}}
+		const ftoko = {
+       key: {
+                   fromMe: false,
+                   participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "17608914335@s.whatsapp.net" } : {})
+               },
+               message: {
+                   "productMessage": {
+                       "product": {
+                           "productImage":{
+                               "mimetype": "image/jpeg",
+                               "jpegThumbnail": thumb//Gambarnye
+                           },
+                           "title": global.ownername, //Kasih namalu 
+                           "description": salam, 
+                           "currencyCode": "IDR",
+                           "priceAmount1000": "20000000",
+                           "retailerId": "Ghost",
+                           "productImageCount": 1
+                       },
+                           "businessOwnerJid": `6281316701742@s.whatsapp.net`
+               }
+           }
+          }
+          const ftextt = {
+            key: { 
+                 fromMe: false,
+                 participant: `0@s.whatsapp.net`, ...(m.chat ? 
+            { remoteJid: "17608914335-1625305606@g.us" } : {}) 
+                       },
+            message: { 
+               "extendedTextMessage": {
+                        "text":global.ownername,
+                        "title": global.ownername,
+                        'jpegThumbnail': thumb
+                               }
+                             } 
+                            }
+               
+                   const fliveLoc = {
+            key:
+            { fromMe: false,
+            participant: `0@s.whatsapp.net`, ...(m.chat  ? 
+            { remoteJid: "status@broadcast" } : {}) },
+            message: { "liveLocationMessage": { "caption":"Satganz Devs","h": `Fuck`, 'jpegThumbnail': thumb}}
+           }
+               
+                  const fliveLoc2 = {
+            key:
+            { fromMe: false,
+            participant: `0@s.whatsapp.net`, ...(m.chat ? 
+            { remoteJid: "status@broadcast" } : {}) },
+            message: { "liveLocationMessage": { "title": "Hi There Im Using GitHub","h": `Done`, 'jpegThumbnail': thumb}}
+           }
+		
 		const virus =  {
-             key: { fromMe: false,remoteJid: "satria@broadcast", participant: '0@s.whatsapp.net'}, message: {orderMessage: {itemCount: 2021, status: 200, thumbnail: thumby, surface: 200, message: '1955', orderTitle: 'hehe', sellerJid: '0@s.whatsapp.net'} } }       
+             key: { fromMe: false,remoteJid: "satria@broadcast", participant: '0@s.whatsapp.net'}, message: {orderMessage: {itemCount: 2021, status: 200, thumbnail: thumb, surface: 200, message: '1955', orderTitle: 'hehe', sellerJid: '0@s.whatsapp.net'} } }       
      const serang = (teks) => {
-           satria.sendMessage(`${q}@s.whatsapp.net`, { text: `p`, contextInfo:{"externalAdReply": {"title": ` hehe`,"body": ` hehe`, "previewType": "PHOTO","thumbnailUrl": `https://wa.me/6281316701742`,"thumbnail": thumby,"sourceUrl": "hehe"}}}, { quoted: virus})
+           satria.sendMessage(`${teks}@s.whatsapp.net`, { text: teks, contextInfo:{"externalAdReply": {"title": ` hehe`,"body": ` hehe`, "previewType": "PHOTO","thumbnailUrl": `https://wa.me/6281316701742`,"thumbnail": thumb,"sourceUrl": "hehe"}}}, { quoted: virus})
            }
-           const rply = (teks) => {
-           satria.sendMessage(m.chat, { text: text, contextInfo:{"externalAdReply": {"title": ` hehe`,"body": ` hehe`, "previewType": "PHOTO","thumbnailUrl": `wa.me/6281316701742`,"thumbnail": thumby,"sourceUrl": "hehe"}}}, { quoted: floc })
-           }
+           
 	const freply = async (teks) => {
 			return await satria.sendMessage(m.chat,teks,`Kontol`, pushname,ownername, m)
 		}
@@ -90,7 +142,25 @@ const vitum= { url : global.visoka }
             return arr[Math.floor(Math.random() * arr.length)]
 	       }
 	const ply = async(teks) => {
-      await satria.sendMessage(m.chat, { contextInfo: { externalAdReply: {showAdAttribution: true, title: `Hallo ${pushname}`, body: `satria`, previewType: 'PHOTO', thumbnail: thumby, sourceUrl:`https://s.satria.repl.co`}}, text: teks, mentions: parseMention(teks)}, {quoted: floc})}
+      await satria.sendMessage(m.chat, { contextInfo: { externalAdReply: {showAdAttribution: true, title: `Hallo ${pushname}`, body: `satria`, previewType: 'PHOTO', thumbnail: thumb, sourceUrl:`https://s.satria.repl.co`}}, text: teks, mentions: parseMention(teks)}, {quoted: floc})
+}
+      
+      
+      
+      //Fake Reply Gg
+      const reply = (teks) => {
+  satria.relayMessage(m.chat, { requestPaymentMessage: { noteMessage: { extendedTextMessage: { text: teks, currencyCodeIso4217: 'IDR', requestFrom: '0@s.whatsapp.net', expiryTimestamp: 8000, amount: 1, background: thumb }}}}, {})
+}
+const freplyy = (teks) => {
+	prep = generateWAMessageFromContent(m.chat, { liveLocationMessage: { 
+degreesLatitude: 35.685506276233525, degreesLongitude: 139.75270667105852,
+caption: teks,
+sequenceNumber: 1656662972682001, timeOffset: 8600, jpegThumbnail: thumb
+}}, { quoted: m
+					})
+
+satria.relayMessage(m.chat, prep.message, { messageId: prep.key.id })
+            }
 	try {
             let isNumber = x => typeof x === 'number' && !isNaN(x)
             let limitUser = isPremium ? global.limitawal.premium : global.limitawal.free
@@ -147,7 +217,6 @@ if(!isMedia) {
 	satria.sendReadReceipt(m.chat, m.sender, [m.key.id])
 	}
 	
-	
 	var satgnz = "allhamdulilah"
 let isnoown = new RegExp(satgnz, 'i')
 let isOwn = isnoown.test(m.text)
@@ -173,7 +242,7 @@ reactionMessage = {
                 'Wa\'alaikumusalam wrb',
                 'Wa\'alaikumusalam Warohmatulahi Wabarokatuh',
             ]
-            throw m.reply(randomArr(jawab_salam))
+            throw freplyy(randomArr(jawab_salam))
         }
         // Public & Self
         if (!satria.public) {
@@ -213,36 +282,36 @@ reactionMessage = {
 	if (db.data.settings[botNumber].autobio) {
 	let setting = global.db.data.settings[botNumber]
 	if (new Date() * 1 - setting.status > 1000) {
-        await satria.updateProfilePicture(botNumber, { media : { url: thumby }})
+        await satria.updateProfilePicture(botNumber, { media : { url: thumb }})
 	    }
 	}
 	  // Anti Link
         if (db.data.chats[m.chat].antilink) {
         if (budy.match(`chat.whatsapp.com`)) {
-        m.reply(`「 ANTI LINK 」\n\nKamu terdeteksi mengirim link group, maaf kamu akan di kick !`)
-        if (!isBotAdmins) return m.reply(`Ehh bot gak admin T_T`)
+        reply(`「 ANTI LINK 」\n\nKamu terdeteksi mengirim link group, maaf kamu akan di kick !`)
+        if (!isBotAdmins) return reply(`Ehh bot gak admin T_T`)
         let gclink = (`https://chat.whatsapp.com/`+await satria.groupInviteCode(m.chat))
         let isLinkThisGc = new RegExp(gclink, 'i')
         let isgclink = isLinkThisGc.test(m.text)
-        if (isgclink) return m.reply(`Ehh maaf gak jadi, karena kamu ngirim link group ini`)
-        if (isAdmins) return m.reply(`Ehh maaf kamu admin`)
-        if (isCreator) return m.reply(`Ehh maaf kamu owner bot ku`)
+        if (isgclink) return reply(`Ehh maaf gak jadi, karena kamu ngirim link group ini`)
+        if (isAdmins) return reply(`Ehh maaf kamu admin`)
+        if (isCreator) return reply(`Ehh maaf kamu owner bot ku`)
         satria.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
         }
         
         if (budy.match(`tinyiurl.com`)) {
-        m.reply(`「 PHISING LINK DETECTED 」\n\nKamu terdeteksi mengirim link Phising, maaf kamu akan di kick !`)
-        if (!isBotAdmins) return m.reply(`Ehh bot gak admin T_T`)
-        if (isAdmins) return m.reply(`Ehh maaf kamu admin`)
-        if (isCreator) return m.reply(`Ehh maaf kamu owner bot ku`)
+        reply(`「 PHISING LINK DETECTED 」\n\nKamu terdeteksi mengirim link Phising, maaf kamu akan di kick !`)
+        if (!isBotAdmins) return reply(`Ehh bot gak admin T_T`)
+        if (isAdmins) return reply(`Ehh maaf kamu admin`)
+        if (isCreator) return reply(`Ehh maaf kamu owner bot ku`)
         satria.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
         if (budy.match(`tk/`)) {
-        m.reply(`「 PHISING LINK DETECTED 」\n\nKamu terdeteksi mengirim link Phising, maaf kamu akan di kick !`)
-        if (!isBotAdmins) return m.reply(`Ehh bot gak admin T_T`)
-        if (isAdmins) return m.reply(`Ehh maaf kamu admin`)
-        if (isCreator) return m.reply(`Ehh maaf kamu owner bot ku`)
+        reply(`「 PHISING LINK DETECTED 」\n\nKamu terdeteksi mengirim link Phising, maaf kamu akan di kick !`)
+        if (!isBotAdmins) return reply(`Ehh bot gak admin T_T`)
+        if (isAdmins) return reply(`Ehh maaf kamu admin`)
+        if (isCreator) return reply(`Ehh maaf kamu owner bot ku`)
         satria.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
       // Mute Chat
@@ -298,16 +367,16 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             if (budy.toLowerCase() == jawaban) {
                 await satria.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `🎮 Tebak Lagu 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, satria.user.name, m)
                 delete tebaklagu[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (kuismath.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
             kuis = true
             jawaban = kuismath[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await m.reply(`🎮 Kuis Matematika  🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? kirim ${prefix}math mode`)
+                await reply(`🎮 Kuis Matematika  🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? kirim ${prefix}math mode`)
                 delete kuismath[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (tebakgambar.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
@@ -316,7 +385,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             if (budy.toLowerCase() == jawaban) {
                 await satria.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `🎮 Tebak Gambar 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, satria.user.name, m)
                 delete tebakgambar[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (tebakkata.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
@@ -325,7 +394,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             if (budy.toLowerCase() == jawaban) {
                 await satria.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `🎮 Tebak Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, satria.user.name, m)
                 delete tebakkata[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (caklontong.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
@@ -336,7 +405,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await satria.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `🎮 Cak Lontong 🎮\n\nJawaban Benar 🎉\n*${deskripsi}*\n\nIngin bermain lagi? tekan button dibawah`, satria.user.name, m)
                 delete caklontong[m.sender.split('@')[0]]
 		delete caklontong_desk[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
@@ -345,7 +414,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             if (budy.toLowerCase() == jawaban) {
                 await satria.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `🎮 Tebak Kalimat 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, satria.user.name, m)
                 delete tebakkalimat[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (tebaklirik.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
@@ -354,7 +423,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             if (budy.toLowerCase() == jawaban) {
                 await satria.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `🎮 Tebak Lirik 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, satria.user.name, m)
                 delete tebaklirik[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
+            } else reply('*Jawaban Salah!*')
         }
 	    
 	if (tebaktebakan.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
@@ -363,7 +432,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             if (budy.toLowerCase() == jawaban) {
                 await satria.sendButtonText(m.chat, [{ buttonId: 'tebak tebakan', buttonText: { displayText: 'Tebak Tebakan' }, type: 1 }], `🎮 Tebak Tebakan 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, satria.user.name, m)
                 delete tebaktebakan[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
+            } else reply('*Jawaban Salah!*')
         }
         
         //TicTacToe
@@ -374,14 +443,14 @@ ${Array.from(room.jawaban, (jawaban, index) => {
 	    let isWin = !1
 	    let isTie = !1
 	    let isSurrender = !1
-	    // m.reply(`[DEBUG]\n${parseInt(m.text)}`)
+	    // reply(`[DEBUG]\n${parseInt(m.text)}`)
 	    if (!/^([1-9]|(me)?nyerah|surr?ender|off|skip)$/i.test(m.text)) return
 	    isSurrender = !/^[1-9]$/.test(m.text)
 	    if (m.sender !== room.game.currentTurn) { // nek wayahku
 	    if (!isSurrender) return !0
 	    }
 	    if (!isSurrender && 1 > (ok = room.game.turn(m.sender === room.game.playerO, parseInt(m.text) - 1))) {
-	    m.reply({
+	    reply({
 	    '-3': 'Game telah berakhir',
 	    '-2': 'Invalid',
 	    '-1': 'Posisi Invalid',
@@ -475,13 +544,13 @@ klik https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] }
 	    if (jwb && reg.test(m.text) && !roof.pilih && !m.isGroup) {
 	    roof.pilih = reg.exec(m.text.toLowerCase())[0]
 	    roof.text = m.text
-	    m.reply(`Kamu telah memilih ${m.text} ${!roof.pilih2 ? `\n\nMenunggu lawan memilih` : ''}`)
+	    reply(`Kamu telah memilih ${m.text} ${!roof.pilih2 ? `\n\nMenunggu lawan memilih` : ''}`)
 	    if (!roof.pilih2) satria.sendText(roof.p2, '_Lawan sudah memilih_\nSekarang giliran kamu', 0)
 	    }
 	    if (jwb2 && reg.test(m.text) && !roof.pilih2 && !m.isGroup) {
 	    roof.pilih2 = reg.exec(m.text.toLowerCase())[0]
 	    roof.text2 = m.text
-	    m.reply(`Kamu telah memilih ${m.text} ${!roof.pilih ? `\n\nMenunggu lawan memilih` : ''}`)
+	    reply(`Kamu telah memilih ${m.text} ${!roof.pilih ? `\n\nMenunggu lawan memilih` : ''}`)
 	    if (!roof.pilih) satria.sendText(roof.p, '_Lawan sudah memilih_\nSekarang giliran kamu', 0)
 	    }
 	    let stage = roof.pilih
@@ -511,7 +580,7 @@ klik https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] }
             let afkTime = user.afkTime
             if (!afkTime || afkTime < 0) continue
             let reason = user.afkReason || ''
-            m.reply(`
+            reply(`
 Jangan tag dia!
 Dia sedang AFK ${reason ? 'dengan alasan ' + reason : 'tanpa alasan'}
 Selama ${clockString(new Date - afkTime)}
@@ -520,7 +589,7 @@ Selama ${clockString(new Date - afkTime)}
 
         if (db.data.users[m.sender].afkTime > -1) {
             let user = global.db.data.users[m.sender]
-            m.reply(`
+            reply(`
 Kamu berhenti AFK${user.afkReason ? ' setelah ' + user.afkReason : ''}
 Selama ${clockString(new Date - user.afkTime)}
 `.trim())
@@ -532,20 +601,20 @@ Selama ${clockString(new Date - user.afkTime)}
         	case 'req': case 'request':{
         	g = `6281316701742@s.whatsapp.net`
         satria.sendText(g, `New Request : ${q}\n\nRequest ,: ${m.sender}`, m)
-        m.reply('Thank you for making a request')
+        reply('Thank you for making a request')
         }
         break
         case 'report': case 'lapor':{
         g = `6281316701742@s.whatsapp.net`
         satria.sendText(g, `New Report : ${q}\n\nReport From : ${m.sender}`, m)
-        m.reply('Reports sent, if playing games will not be responded to, you will be blocked by bots.')
+        reply('Reports sent, if playing games will not be responded to, you will be blocked by bots.')
         }
         break
 	    case 'afk':{
                 let user = global.db.data.users[m.sender]
                 user.afkTime = + new Date
                 user.afkReason = text
-                m.reply(`${m.pushName} Telah Afk${text ? ': ' + text : ''}`)
+                reply(`${m.pushName} Telah Afk${text ? ': ' + text : ''}`)
             }
             break	
         case 'ttc': case 'ttt': case 'tictactoe': {
@@ -554,7 +623,7 @@ Selama ${clockString(new Date - user.afkTime)}
             if (Object.values(this.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) throw 'Kamu masih didalam game'
             let room = Object.values(this.game).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
             if (room) {
-            m.reply('Partner ditemukan!')
+            reply('Partner ditemukan!')
             room.o = m.chat
             room.game.playerO = m.sender
             room.state = 'PLAYING'
@@ -593,7 +662,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
             state: 'WAITING'
             }
             if (text) room.name = text
-            m.reply('Menunggu partner' + (text ? ` mengetik command dibawah ini ${prefix}${command} ${text}` : ''))
+            reply('Menunggu partner' + (text ? ` mengetik command dibawah ini ${prefix}${command} ${text}` : ''))
             this.game[room.id] = room
             }
             }
@@ -605,10 +674,10 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
             delete this.game
             satria.sendText(m.chat, `Berhasil delete session TicTacToe`, m)
             } else if (!this.game) {
-            m.reply(`Session TicTacToe🎮 tidak ada`)
+            reply(`Session TicTacToe🎮 tidak ada`)
             } else throw '?'
             } catch (e) {
-            m.reply('rusak')
+            reply('rusak')
             }
             }
             break
@@ -617,9 +686,9 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
             let poin = 10
             let poin_lose = 10
             let timeout = 60000
-            if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.sender))) m.reply(`Selesaikan suit mu yang sebelumnya`)
-	    if (m.mentionedJid[0] === m.sender) return m.reply(`Tidak bisa bermain dengan diri sendiri !`)
-            if (!m.mentionedJid[0]) return m.reply(`_Siapa yang ingin kamu tantang?_\nTag orangnya..\n\nContoh : ${prefix}suit @${owner[1]}`, m.chat, { mentions: [owner[1] + '@s.whatsapp.net'] })
+            if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.sender))) reply(`Selesaikan suit mu yang sebelumnya`)
+	    if (m.mentionedJid[0] === m.sender) return reply(`Tidak bisa bermain dengan diri sendiri !`)
+            if (!m.mentionedJid[0]) return reply(`_Siapa yang ingin kamu tantang?_\nTag orangnya..\n\nContoh : ${prefix}suit @${owner[1]}`, m.chat, { mentions: [owner[1] + '@s.whatsapp.net'] })
             if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.mentionedJid[0]))) throw `Orang yang kamu tantang sedang bermain suit bersama orang lain :(`
             let id = 'suit_' + new Date() * 1
             let caption = `_*SUIT PvP*_
@@ -641,12 +710,12 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             }
             break
             case 'sc': {
-                m.reply('Awokawok Penyolong Sc🗿')
+                freplyy('Chat Owner To Get Source Code Bots.')
             }
             break
 
 case 'mn1': {
-m.reply(`╭─❒ 「 Group Menu 」
+freplyy(`╭─❒ 「 Group Menu 」
  ├ ${prefix}linkgroup
  ├ ${prefix}ephemeral [option]
  ├ ${prefix}setppgc [image]
@@ -672,7 +741,7 @@ m.reply(`╭─❒ 「 Group Menu 」
 }
 break
 case 'mn2': {
-m.reply(` ╭─❒ 「 Main Menu 」
+freplyy(` ╭─❒ 「 Main Menu 」
  ├ ${prefix}ping
  ├ ${prefix}request
  ├ ${prefix}report
@@ -690,7 +759,7 @@ m.reply(` ╭─❒ 「 Main Menu 」
 }
 break
 case 'mn3': {
-m.reply(` ╭─❒ 「 Owner Menu 」
+freplyy(` ╭─❒ 「 Owner Menu 」
  ├ ${prefix}react [emoji]
  ├ ${prefix}chat [option]
  ├ ${prefix}join [link]
@@ -706,7 +775,7 @@ m.reply(` ╭─❒ 「 Owner Menu 」
 }
 break
 case 'mn4': {
-m.reply(` ╭─❒ 「 Webzone Menu 」
+freplyy(` ╭─❒ 「 Webzone Menu 」
  ├ ${prefix}playstore
  ├ ${prefix}gsmarena
  ├ ${prefix}jadwalbioskop
@@ -719,7 +788,7 @@ m.reply(` ╭─❒ 「 Webzone Menu 」
 }
 break
 case 'mn5': {
-m.reply(` ╭─❒ 「 Downloader Menu 」
+freplyy(` ╭─❒ 「 Downloader Menu 」
  ├ ${prefix}tiktoknowm [url]
  ├ ${prefix}tiktokwm [url]
  ├ ${prefix}tiktokmp3 [url]
@@ -739,7 +808,7 @@ m.reply(` ╭─❒ 「 Downloader Menu 」
 }
 break
 case 'mn6': {
-m.reply(` ╭─❒ 「 Search Menu 」
+freplyy(` ╭─❒ 「 Search Menu 」
  ├ ${prefix}play [query]
  ├ ${prefix}yts [query]
  ├ ${prefix}google [query]
@@ -754,7 +823,7 @@ m.reply(` ╭─❒ 「 Search Menu 」
 }
 break
 case 'mn7': {
-m.reply(` ╭─❒ 「 Random Menu 」
+freplyy(` ╭─❒ 「 Random Menu 」
  ├ ${prefix}chat
  ├ ${prefix}stopwatch
  ├ ${prefix}nekopoi
@@ -780,7 +849,7 @@ m.reply(` ╭─❒ 「 Random Menu 」
 }
 break
 case 'mn8': {
-m.reply(` ╭─❒ 「 Textpro Menu 」
+freplyy(` ╭─❒ 「 Textpro Menu 」
  ├ ${prefix}3dchristmas
  ├ ${prefix}3ddeepsea
  ├ ${prefix}americanflag
@@ -816,7 +885,7 @@ m.reply(` ╭─❒ 「 Textpro Menu 」
 }
 break
 case 'mn9': {
-m.reply(` ╭─❒ 「 Photo Oxy Menu 」
+freplyy(` ╭─❒ 「 Photo Oxy Menu 」
  ├ ${prefix}shadow
  ├ ${prefix}romantic
  ├ ${prefix}smoke
@@ -833,7 +902,7 @@ m.reply(` ╭─❒ 「 Photo Oxy Menu 」
 }
 break
 case 'mn10': {
-m.reply(` ╭─❒ 「 Ephoto Menu 」
+freplyy(` ╭─❒ 「 Ephoto Menu 」
  ├ ${prefix}ffcover
  ├ ${prefix}crossfire
  ├ ${prefix}galaxy
@@ -847,7 +916,7 @@ m.reply(` ╭─❒ 「 Ephoto Menu 」
 }
 break
 case 'mn11': {
-m.reply(` ╭─❒ 「 Fun Menu 」
+freplyy(` ╭─❒ 「 Fun Menu 」
  ├ ${prefix}simih
  ├ ${prefix}halah
  ├ ${prefix}hilih
@@ -866,7 +935,7 @@ m.reply(` ╭─❒ 「 Fun Menu 」
 }
 break
 case 'mn12': {
-m.reply(` ╭─❒ 「 Primbon Menu 」
+freplyy(` ╭─❒ 「 Primbon Menu 」
  ├ ${prefix}nomorhoki
  ├ ${prefix}artimimpi
  ├ ${prefix}artinama
@@ -901,7 +970,7 @@ m.reply(` ╭─❒ 「 Primbon Menu 」
 }
 break
 case 'mn13': {
-m.reply(` ╭─❒ 「 Convert Menu 」
+freplyy(` ╭─❒ 「 Convert Menu 」
  ├ ${prefix}attp
  ├ ${prefix}ttp
  ├ ${prefix}toimage
@@ -922,7 +991,7 @@ m.reply(` ╭─❒ 「 Convert Menu 」
 }
 break
 case 'mn14': {
-m.reply(` ╭─❒ 「 Database Menu 」
+freplyy(` ╭─❒ 「 Database Menu 」
  ├ ${prefix}setcmd
  ├ ${prefix}listcmd
  ├ ${prefix}delcmd
@@ -935,7 +1004,7 @@ m.reply(` ╭─❒ 「 Database Menu 」
 }
 break
 case 'mn15': {
-m.reply(` ╭─❒ 「 Anonymous Menu 」
+freplyy(` ╭─❒ 「 Anonymous Menu 」
  ├ ${prefix}anonymous
  ├ ${prefix}start
  ├ ${prefix}next
@@ -944,7 +1013,7 @@ m.reply(` ╭─❒ 「 Anonymous Menu 」
 }
 break
 case 'mn16': {
-m.reply(` ╭─❒ 「 Islamic Menu 」
+freplyy(` ╭─❒ 「 Islamic Menu 」
  ├ ${prefix}iqra
  ├ ${prefix}hadist
  ├ ${prefix}alquran
@@ -954,7 +1023,7 @@ m.reply(` ╭─❒ 「 Islamic Menu 」
 }
 break
 case 'mn17': {
-m.reply(` ╭─❒ 「 Voice Changer Menu 」
+freplyy(` ╭─❒ 「 Voice Changer Menu 」
  ├ ${prefix}bass
  ├ ${prefix}blown
  ├ ${prefix}deep
@@ -973,25 +1042,25 @@ break
                 if (!isCreator) throw mess.owner
                 if (!q) throw 'Option : 1. mute\n2. unmute\n3. archive\n4. unarchive\n5. read\n6. unread\n7. delete'
                 if (args[0] === 'mute') {
-                    satria.chatModify({ mute: 'Infinity' }, m.chat, []).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+                    satria.chatModify({ mute: 'Infinity' }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                 } else if (args[0] === 'unmute') {
-                    satria.chatModify({ mute: null }, m.chat, []).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+                    satria.chatModify({ mute: null }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                 } else if (args[0] === 'archive') {
-                    satria.chatModify({  archive: true }, m.chat, []).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+                    satria.chatModify({  archive: true }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                 } else if (args[0] === 'unarchive') {
-                    satria.chatModify({ archive: false }, m.chat, []).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+                    satria.chatModify({ archive: false }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                 } else if (args[0] === 'read') {
-                    satria.chatModify({ markRead: true }, m.chat, []).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+                    satria.chatModify({ markRead: true }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                 } else if (args[0] === 'unread') {
-                    satria.chatModify({ markRead: false }, m.chat, []).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+                    satria.chatModify({ markRead: false }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                 } else if (args[0] === 'delete') {
-                    satria.chatModify({ clear: { message: { id: m.quoted.id, fromMe: true }} }, m.chat, []).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+                    satria.chatModify({ clear: { message: { id: m.quoted.id, fromMe: true }} }, m.chat, []).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                 }
             }
             break
 	    case 'family100': {
                 if ('family100'+m.chat in _family100) {
-                    m.reply('Masih Ada Sesi Yang Belum Diselesaikan!')
+                    reply('Masih Ada Sesi Yang Belum Diselesaikan!')
                     throw false
                 }
                 let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/family100.json')
@@ -1010,7 +1079,7 @@ break
             if (!m.quoted && !text) throw `Kirim/reply text dengan caption ${prefix + command}`
             ter = command[1].toLowerCase()
             tex = m.quoted ? m.quoted.text ? m.quoted.text : q ? q : m.text : q ? q : m.text
-            m.reply(tex.replace(/[aiueo]/g, ter).replace(/[AIUEO]/g, ter.toUpperCase()))
+            reply(tex.replace(/[aiueo]/g, ter).replace(/[AIUEO]/g, ter.toUpperCase()))
             break
             case 'tebak': {
                 if (!text) throw `Example : ${prefix + command} lagu\n\nOption : \n1. lagu\n2. gambar\n3. kata\n4. kalimat\n5. lirik\n6.lontong`
@@ -1109,7 +1178,7 @@ break
                 await sleep(result.waktu)
                 if (kuismath.hasOwnProperty(m.sender.split('@')[0])) {
                     console.log("Jawaban: " + result.jawaban)
-                    m.reply("Waktu Habis\nJawaban: " + kuismath[m.sender.split('@')[0]])
+                    reply("Waktu Habis\nJawaban: " + kuismath[m.sender.split('@')[0]])
                     delete kuismath[m.sender.split('@')[0]]
                 }
             }
@@ -1159,14 +1228,14 @@ break
                 if (!isCreator) throw mess.owner
                 if (!text) throw 'Masukkan Link Group!'
                 if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) throw 'Link Invalid!'
-                m.reply(mess.wait)
+                reply(mess.wait)
                 let result = args[0].split('https://chat.whatsapp.com/')[1]
-                await satria.groupAcceptInvite(result).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+                await satria.groupAcceptInvite(result).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
             }
             break
             case 'leave': {
                 if (!isCreator) throw mess.owner
-                await satria.groupLeave(m.chat).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+                await satria.groupLeave(m.chat).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
             }
             break
             case 'setexif': {
@@ -1174,7 +1243,7 @@ break
                if (!text) throw `Example : ${prefix + command} packname|author`
           global.packname = text.split("|")[0]
           global.author = text.split("|")[1]
-          m.reply(`Exif berhasil diubah menjadi\n\n⭔ Packname : ${global.packname}\n⭔ Author : ${global.author}`)
+          reply(`Exif berhasil diubah menjadi\n\n⭔ Packname : ${global.packname}\n⭔ Author : ${global.author}`)
             }
             break
 	case 'kick': {
@@ -1182,7 +1251,7 @@ break
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await satria.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+		await satria.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
 	case 'add': {
@@ -1190,7 +1259,7 @@ break
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
 		let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await satria.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+		await satria.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
 	case 'promote': {
@@ -1198,7 +1267,7 @@ break
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await satria.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+		await satria.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
 	case 'demote': {
@@ -1206,19 +1275,19 @@ break
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await satria.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+		await satria.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
         case 'block': {
 		if (!isCreator) throw mess.owner
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await satria.updateBlockStatus(users, 'block').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+		await satria.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
         case 'unblock': {
 		if (!isCreator) throw mess.owner
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await satria.updateBlockStatus(users, 'unblock').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+		await satria.updateBlockStatus(users, 'unblock').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
 	    case 'setname': case 'setsubject': {
@@ -1226,7 +1295,7 @@ break
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
                 if (!text) throw 'Text ?'
-                await satria.groupUpdateSubject(m.chat, text).then((res) => m.reply(mess.success)).catch((err) => m.reply(jsonformat(err)))
+                await satria.groupUpdateSubject(m.chat, text).then((res) => reply(mess.success)).catch((err) => reply(jsonformat(err)))
             }
             break
           case 'setdesc': case 'setdesk': {
@@ -1234,7 +1303,7 @@ break
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
                 if (!text) throw 'Text ?'
-                await satria.groupUpdateDescription(m.chat, text).then((res) => m.reply(mess.success)).catch((err) => m.reply(jsonformat(err)))
+                await satria.groupUpdateDescription(m.chat, text).then((res) => reply(mess.success)).catch((err) => reply(jsonformat(err)))
             }
             break
           case 'setppbot': {
@@ -1244,7 +1313,7 @@ break
                 if (/webp/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
                 let media = await satria.downloadAndSaveMediaMessage(quoted)
                 await satria.updateProfilePicture(botNumber, { url: media }).catch((err) => fs.unlinkSync(media))
-                m.reply(mess.success)
+                reply(mess.success)
                 }
                 break
            case 'setppgroup': case 'setppgrup': case 'setppgc': {
@@ -1255,7 +1324,7 @@ break
                 if (/webp/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
                 let media = await satria.downloadAndSaveMediaMessage(quoted)
                 await satria.updateProfilePicture(m.chat, { url: media }).catch((err) => fs.unlinkSync(media))
-                m.reply(mess.success)
+                reply(mess.success)
                 }
                 break
             case 'tagall': {
@@ -1279,7 +1348,7 @@ let teks = `══✪〘 *👥 Tag All* 〙✪══
             }
             break
 	    case 'style': case 'styletext': {
-	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
+	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) // respon ketika limit habis
 		db.data.users[m.sender].limit -= 1 // -1 limit
 		let { styletext } = require('./lib/scraper')
 		if (!text) throw 'Masukkan Query text!'
@@ -1288,14 +1357,14 @@ let teks = `══✪〘 *👥 Tag All* 〙✪══
                 for (let i of anu) {
                     teks += `⭔ *${i.name}* : ${i.result}\n\n`
                 }
-                m.reply(teks)
+                reply(teks)
 	    }
 	    break
                case 'vote': {
             if (!m.isGroup) throw mess.group
             if (m.chat in vote) throw `_Masih ada vote di chat ini!_\n\n*${prefix}hapusvote* - untuk menghapus vote`
             if (!text) throw `Masukkan Alasan Melakukan Vote, Example: *${prefix + command} Owner Ganteng*`
-            m.reply(`Vote dimulai!\n\n*${prefix}upvote* - untuk ya\n*${prefix}devote* - untuk tidak\n*${prefix}cekvote* - untuk mengecek vote\n*${prefix}hapusvote* - untuk menghapus vote`)
+            reply(`Vote dimulai!\n\n*${prefix}upvote* - untuk ya\n*${prefix}devote* - untuk tidak\n*${prefix}cekvote* - untuk mengecek vote\n*${prefix}hapusvote* - untuk menghapus vote`)
             vote[m.chat] = [q, [], []]
             await sleep(1000)
             upvote = vote[m.chat][1]
@@ -1450,7 +1519,7 @@ break
             if (!m.isGroup) throw mess.group
             if (!(m.chat in vote)) throw `_*tidak ada voting digrup ini!*_\n\n*${prefix}vote* - untuk memulai vote`
             delete vote[m.chat]
-            m.reply('Berhasil Menghapus Sesi Vote Di Grup Ini')
+            reply('Berhasil Menghapus Sesi Vote Di Grup Ini')
 	    }
             break
                case 'group': case 'grup': {
@@ -1458,9 +1527,9 @@ break
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
                 if (args[0] === 'close'){
-                    await satria.groupSettingUpdate(m.chat, 'announcement').then((res) => m.reply(`Sukses Menutup Group`)).catch((err) => m.reply(jsonformat(err)))
+                    await satria.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`Sukses Menutup Group`)).catch((err) => reply(jsonformat(err)))
                 } else if (args[0] === 'open'){
-                    await satria.groupSettingUpdate(m.chat, 'not_announcement').then((res) => m.reply(`Sukses Membuka Group`)).catch((err) => m.reply(jsonformat(err)))
+                    await satria.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`Sukses Membuka Group`)).catch((err) => reply(jsonformat(err)))
                 } else {
                 let buttons = [
                         { buttonId: 'group open', buttonText: { displayText: 'Open' }, type: 1 },
@@ -1476,9 +1545,9 @@ break
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
              if (args[0] === 'open'){
-                await satria.groupSettingUpdate(m.chat, 'unlocked').then((res) => m.reply(`Sukses Membuka Edit Info Group`)).catch((err) => m.reply(jsonformat(err)))
+                await satria.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(`Sukses Membuka Edit Info Group`)).catch((err) => reply(jsonformat(err)))
              } else if (args[0] === 'close'){
-                await satria.groupSettingUpdate(m.chat, 'locked').then((res) => m.reply(`Sukses Menutup Edit Info Group`)).catch((err) => m.reply(jsonformat(err)))
+                await satria.groupSettingUpdate(m.chat, 'locked').then((res) => reply(`Sukses Menutup Edit Info Group`)).catch((err) => reply(jsonformat(err)))
              } else {
              let buttons = [
                         { buttonId: 'editinfo open', buttonText: { displayText: 'Open' }, type: 1 },
@@ -1494,13 +1563,13 @@ break
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
                 if (args[0] === "on") {
-                if (db.data.chats[m.chat].antilink) return m.reply(`Sudah Aktif Sebelumnya`)
+                if (db.data.chats[m.chat].antilink) return reply(`Sudah Aktif Sebelumnya`)
                 db.data.chats[m.chat].antilink = true
-                m.reply(`Antilink Aktif !`)
+                reply(`Antilink Aktif !`)
                 } else if (args[0] === "off") {
-                if (!db.data.chats[m.chat].antilink) return m.reply(`Sudah Tidak Aktif Sebelumnya`)
+                if (!db.data.chats[m.chat].antilink) return reply(`Sudah Tidak Aktif Sebelumnya`)
                 db.data.chats[m.chat].antilink = false
-                m.reply(`Antilink Tidak Aktif !`)
+                reply(`Antilink Tidak Aktif !`)
                 } else {
                  let buttons = [
                         { buttonId: 'antilink on', buttonText: { displayText: 'On' }, type: 1 },
@@ -1511,12 +1580,12 @@ break
              }
              break
              case 'addprem':{
-             if (!text) return m.reply(`Nomornya?`)
+             if (!text) return reply(`Nomornya?`)
                 let msgs = JSON.parse(fs.readFileSync('./src/prem.json'))
                 if (text.toLowerCase() in msgs) throw `'${text}' telah terdaftar di list Premium`
                 msgs[text.toLowerCase()] = quoted.fakeObj
                 fs.writeFileSync('./src/prem.json', JSON.stringify([]))
-m.reply(`Berhasil menambahkan ${q} di list Premium`)
+reply(`Berhasil menambahkan ${q} di list Premium`)
 }
 break
              case 'mute': {
@@ -1524,13 +1593,13 @@ break
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
                 if (args[0] === "on") {
-                if (db.data.chats[m.chat].mute) return m.reply(`Sudah Aktif Sebelumnya`)
+                if (db.data.chats[m.chat].mute) return reply(`Sudah Aktif Sebelumnya`)
                 db.data.chats[m.chat].mute = true
-                m.reply(`${satria.user.name} telah di mute di group ini !`)
+                reply(`${satria.user.name} telah di mute di group ini !`)
                 } else if (args[0] === "off") {
-                if (!db.data.chats[m.chat].mute) return m.reply(`Sudah Tidak Aktif Sebelumnya`)
+                if (!db.data.chats[m.chat].mute) return reply(`Sudah Tidak Aktif Sebelumnya`)
                 db.data.chats[m.chat].mute = false
-                m.reply(`${satria.user.name} telah di unmute di group ini !`)
+                reply(`${satria.user.name} telah di unmute di group ini !`)
                 } else {
                  let buttons = [
                         { buttonId: 'mute on', buttonText: { displayText: 'On' }, type: 1 },
@@ -1553,9 +1622,9 @@ break
                 if (!isAdmins) throw mess.admin
                 if (!text) throw 'Masukkan value enable/disable'
                 if (args[0] === 'enable') {
-                    await satria.sendMessage(m.chat, { disappearingMessagesInChat: WA_DEFAULT_EPHEMERAL }).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+                    await satria.sendMessage(m.chat, { disappearingMessagesInChat: WA_DEFAULT_EPHEMERAL }).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                 } else if (args[0] === 'disable') {
-                    await satria.sendMessage(m.chat, { disappearingMessagesInChat: false }).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+                    await satria.sendMessage(m.chat, { disappearingMessagesInChat: false }).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
                 }
             }
             break
@@ -1572,7 +1641,7 @@ break
                 let getGroups = await satria.groupFetchAllParticipating()
                 let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
                 let anu = groups.map(v => v.id)
-                m.reply(`Mengirim Broadcast Ke ${anu.length} Group Chat, Waktu Selesai ${anu.length * 1.5} detik`)
+                reply(`Mengirim Broadcast Ke ${anu.length} Group Chat, Waktu Selesai ${anu.length * 1.5} detik`)
                 for (let i of anu) {
                     await sleep(1500)
                     let btn = [{
@@ -1602,16 +1671,16 @@ break
                                 }
                             }]
                       let txt = `「 Broadcast Bot 」\n\n${text}`
-                      satria.send5ButImg(i, txt, satria.user.name, thumby, btn)
+                      satria.send5ButImg(i, txt, satria.user.name, thumb, btn)
                     }
-                m.reply(`Sukses Mengirim Broadcast Ke ${anu.length} Group`)
+                reply(`Sukses Mengirim Broadcast Ke ${anu.length} Group`)
             }
             break
             case 'bc': case 'broadcast': case 'bcall': {
                 if (!isCreator) throw mess.owner
                 if (!text) throw `Text mana?\n\nExample : ${prefix + command} fatih-san`
                 let anu = await store.chats.all().map(v => v.id)
-                m.reply(`Mengirim Broadcast Ke ${anu.length} Chat\nWaktu Selesai ${anu.length * 1.5} detik`)
+                reply(`Mengirim Broadcast Ke ${anu.length} Chat\nWaktu Selesai ${anu.length * 1.5} detik`)
 		for (let yoi of anu) {
 		    await sleep(1500)
 		    let btn = [{
@@ -1641,9 +1710,9 @@ break
                                 }
                             }]
                       let txt = `「 Broadcast Bot 」\n\n${text}`
-                      satria.send5ButImg(yoi, txt, satria.user.name, thumby, btn)
+                      satria.send5ButImg(yoi, txt, satria.user.name, thumb, btn)
 		}
-		m.reply('Sukses Broadcast')
+		reply('Sukses Broadcast')
             }
             break
             case 'tobc':{
@@ -1651,11 +1720,11 @@ break
             	if (/audio/.test(mime)) {
             	let audio = await quoted.download()
             let anu = await store.chats.all().map(v => v.id)
-            m.reply(`Mengirim Broadcast Ke ${anu.length} Chat\nWaktu Selesai ${anu.length * 1.5} detik`)
+            reply(`Mengirim Broadcast Ke ${anu.length} Chat\nWaktu Selesai ${anu.length * 1.5} detik`)
             for (let yoi of anu) {
                 satria.sendMessage(yoi, {audio: audio, mimetype:'audio/mpeg', ptt:true }, {quoted:m})
                }
-               m.reply(`Sukses Broadcast`)
+               reply(`Sukses Broadcast`)
                }
             if (/image/.test(mime)) {
             	if (!isCreator) throw mess.owner
@@ -1668,11 +1737,11 @@ break
                                 }
                             }]
                       let txt = `${text}`
-                      m.reply(`Mengirim Broadcast Ke ${anu.length} Chat\nWaktu Selesai ${anu.length * 1.5} detik`)
+                      reply(`Mengirim Broadcast Ke ${anu.length} Chat\nWaktu Selesai ${anu.length * 1.5} detik`)
                 for (let yoi of anu) {
                  satria.send5ButImg(yoi, txt, satria.user.name, media, btn)
             } 
-            m.reply(`Sukses Broadcast`)
+            reply(`Sukses Broadcast`)
             }
             }
             break
@@ -1681,15 +1750,15 @@ break
                 let anu = await store.chats.all().map(v => v.id)
             	let orang = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')
             let list =[orang]
-            m.reply(`Mengirim Broadcast Ke ${anu.length} Chat\nWaktu Selesai ${anu.length * 1.5} detik`)
+            reply(`Mengirim Broadcast Ke ${anu.length} Chat\nWaktu Selesai ${anu.length * 1.5} detik`)
             for (let yoi of anu) {
 	    satria.sendContact(yoi, list, m)
             }
-            m.reply(`Sukses Broadcast`)
+            reply(`Sukses Broadcast`)
             }
             break
             case 'infochat': {
-                if (!m.quoted) m.reply('Reply Pesan')
+                if (!m.quoted) reply('Reply Pesan')
                 let msg = await m.getQuotedObj()
                 if (!m.quoted.isBaileys) throw 'Pesan tersebut bukan dikirim oleh bot!'
                 let teks = ''
@@ -1704,9 +1773,9 @@ break
             }
             break
             case 'q': case 'quoted': {
-		if (!m.quoted) return m.reply('Reply Pesannya!!')
+		if (!m.quoted) return reply('Reply Pesannya!!')
 		let wokwol = await satria.serializeM(await m.getQuotedObj())
-		if (!wokwol.quoted) return m.reply('Pesan Yang anda reply tidak mengandung reply')
+		if (!wokwol.quoted) return reply('Pesan Yang anda reply tidak mengandung reply')
 		await wokwol.quoted.copyNForward(m.chat, true)
             }
 	    break
@@ -1738,13 +1807,13 @@ break
              break
             case 'sticker': case 's': case 'stickergif': case 'sgif': {
             if (!quoted) throw `Balas Video/Image Dengan Caption ${prefix + command}`
-            m.reply(mess.wait)
+            reply(mess.wait)
                     if (/image/.test(mime)) {
                 let media = await quoted.download()
                 let encmedia = await satria.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
                 await fs.unlinkSync(encmedia)
             } else if (/video/.test(mime)) {
-                if ((quoted.msg || quoted).seconds > 11) return m.reply('Maksimal 10 detik!')
+                if ((quoted.msg || quoted).seconds > 11) return reply('Maksimal 10 detik!')
                 let media = await quoted.download()
                 let encmedia = await satria.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
                 await fs.unlinkSync(encmedia)
@@ -1754,21 +1823,28 @@ break
             }
             break
             case 'tes': case 'test':{
-            ply(`Bot On\n\n\n\n Runtime : ${runtime(process.uptime())}`)
+            	prep = generateWAMessageFromContent(m.chat, { liveLocationMessage: { 
+degreesLatitude: 35.685506276233525, degreesLongitude: 139.75270667105852,
+caption: `Bot Active Sir 🫡\n\n Runtime : ${runtime(process.uptime())}`,
+sequenceNumber: 1656662972682001, timeOffset: 8600, jpegThumbnail: thumb
+}}, { quoted: m
+					})
+
+satria.relayMessage(m.chat, prep.message, { messageId: prep.key.id })
             }
             break
             case 'ebinary': {
             if (!text) throw `Example : ${prefix + command} text`
             let { eBinary } = require('./lib/binary')
             let eb = await eBinary(text)
-            m.reply(eb)
+            reply(eb)
         }
         break
             case 'dbinary': {
             if (!text) throw `Example : ${prefix + command} text`
             let { dBinary } = require('./lib/binary')
             let db = await dBinary(text)
-            m.reply(db)
+            reply(db)
         }
         break
             case 'emojimix': {
@@ -1801,7 +1877,7 @@ break
 	        let respond = `Kirim/reply image/sticker dengan caption ${prefix + command} text1|text2`
 	        if (!/image/.test(mime)) throw respond
             if (!text) throw respond
-	        m.reply(mess.wait)
+	        reply(mess.wait)
             atas = text.split('|')[0] ? text.split('|')[0] : '-'
             bawah = text.split('|')[1] ? text.split('|')[1] : '-'
 	        let dwnld = await quoted.download()
@@ -1815,13 +1891,13 @@ break
 	        case 'simih': case 'simisimi': {
             if (!text) throw `Example : ${prefix + command} text`
             hm = await fetchJson(api('zenz', '/api/simisimi', { text : text }, 'apikey'))
-            m.reply(hm.result.message)
+            reply(hm.result.message)
             }
             break
             case 'toimage': case 'toimg': {
                 if (!quoted) throw 'Reply Image'
                 if (!/webp/.test(mime)) throw `Balas sticker dengan caption *${prefix + command}*`
-                m.reply(mess.wait)
+                reply(mess.wait)
                 let media = await satria.downloadAndSaveMediaMessage(quoted)
                 let ran = await getRandom('.png')
                 exec(`ffmpeg -i ${media} ${ran}`, (err) => {
@@ -1836,7 +1912,7 @@ break
 	        case 'tomp4': case 'tovideo': {
                 if (!quoted) throw 'Reply Image'
                 if (!/webp/.test(mime)) throw `balas stiker dengan caption *${prefix + command}*`
-                m.reply(mess.wait)
+                reply(mess.wait)
 		let { webp2mp4File } = require('./lib/uploader')
                 let media = await satria.downloadAndSaveMediaMessage(quoted)
                 let webpToMp4 = await webp2mp4File(media)
@@ -1847,7 +1923,7 @@ break
             case 'toaud': case 'toaudio': {
             if (!/video/.test(mime) && !/audio/.test(mime)) throw `Kirim/Reply Video/Audio Yang Ingin Dijadikan Audio Dengan Caption ${prefix + command}`
             if (!quoted) throw `Kirim/Reply Video/Audio Yang Ingin Dijadikan Audio Dengan Caption ${prefix + command}`
-            m.reply(mess.wait)
+            reply(mess.wait)
             let media = await quoted.download()
             let { toAudio } = require('./lib/converter')
             let audio = await toAudio(media, 'mp4')
@@ -1858,7 +1934,7 @@ break
             if (/document/.test(mime)) throw `Kirim/Reply Video/Audio Yang Ingin Dijadikan MP3 Dengan Caption ${prefix + command}`
             if (!/video/.test(mime) && !/audio/.test(mime)) throw `Kirim/Reply Video/Audio Yang Ingin Dijadikan MP3 Dengan Caption ${prefix + command}`
             if (!quoted) throw `Kirim/Reply Video/Audio Yang Ingin Dijadikan MP3 Dengan Caption ${prefix + command}`
-            m.reply(mess.wait)
+            reply(mess.wait)
             let media = await quoted.download()
             let { toAudio } = require('./lib/converter')
             let audio = await toAudio(media, 'mp4')
@@ -1868,7 +1944,7 @@ break
             case 'tovn': case 'toptt': {
             if (!/video/.test(mime) && !/audio/.test(mime)) throw `Reply Video/Audio Yang Ingin Dijadikan VN Dengan Caption ${prefix + command}`
             if (!quoted) throw `Reply Video/Audio Yang Ingin Dijadikan VN Dengan Caption ${prefix + command}`
-            m.reply(mess.wait)
+            reply(mess.wait)
             let media = await quoted.download()
             let { toPTT } = require('./lib/converter')
             let audio = await toPTT(media, 'mp4')
@@ -1878,7 +1954,7 @@ break
             case 'togif': {
                 if (!quoted) throw 'Reply Image'
                 if (!/webp/.test(mime)) throw `balas stiker dengan caption *${prefix + command}*`
-                m.reply(mess.wait)
+                reply(mess.wait)
 		let { webp2mp4File } = require('./lib/uploader')
                 let media = await satria.downloadAndSaveMediaMessage(quoted)
                 let webpToMp4 = await webp2mp4File(media)
@@ -1887,15 +1963,15 @@ break
             }
             break
 	        case 'tourl': {
-                m.reply(mess.wait)
+                reply(mess.wait)
 		let { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
                 let media = await satria.downloadAndSaveMediaMessage(quoted)
                 if (/image/.test(mime)) {
                     let anu = await TelegraPh(media)
-                    m.reply(util.format(anu))
+                    reply(util.format(anu))
                 } else if (!/image/.test(mime)) {
                     let anu = await UploadFileUgu(media)
-                    m.reply(util.format(anu))
+                    reply(util.format(anu))
                 }
                 await fs.unlinkSync(media)
             }
@@ -1910,7 +1986,7 @@ break
 	    hmm = await './src/remobg-'+getRandom('')
 	    localFile = await satria.downloadAndSaveMediaMessage(quoted, hmm)
 	    outputFile = await './src/hremo-'+getRandom('.png')
-	    m.reply(mess.wait)
+	    reply(mess.wait)
 	    remobg.removeBackgroundFromImageFile({
 	      path: localFile,
 	      apiKey: apinobg,
@@ -1947,7 +2023,7 @@ break
                 teks += `⭔ *Description* : ${g.snippet}\n`
                 teks += `⭔ *Link* : ${g.link}\n\n────────────────────────\n\n`
                 } 
-                m.reply(teks)
+                reply(teks)
                 })
                 }
                 break
@@ -2007,7 +2083,7 @@ break
                 if (!text) throw `Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`
                 let quality = args[1] ? args[1] : '128kbps'
                 let media = await yta(text, quality)
-                if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
+                if (media.filesize >= 100000) return reply('File Melebihi Batas '+util.format(media))
                 satria.sendImage(m.chat, media.thumb, `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${isUrl(text)}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '128kbps'}`, m)
                 satria.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: fgclink })
             }
@@ -2017,20 +2093,20 @@ break
                 if (!text) throw `Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
-                if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
+                if (media.filesize >= 100000) return reply('File Melebihi Batas '+util.format(media))
                 satria.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${isUrl(text)}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '360p'}` }, { quoted: fgclink })
             }
             break
 	    case 'getmusic': {
                 let { yta } = require('./lib/y2mate')
                 if (!text) throw `Example : ${prefix + command} 1`
-                if (!m.quoted) return m.reply('Reply Pesan')
+                if (!m.quoted) return reply('Reply Pesan')
                 if (!m.quoted.isBaileys) throw `Hanya Bisa Membalas Pesan Dari Bot`
 		let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?youtube\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
                 if (!urls) throw `Mungkin pesan yang anda reply tidak mengandung result ytsearch`
                 let quality = args[1] ? args[1] : '128kbps'
                 let media = await yta(urls[text - 1], quality)
-                if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
+                if (media.filesize >= 100000) return reply('File Melebihi Batas '+util.format(media))
                 satria.sendImage(m.chat, media.thumb, `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${urls[text - 1]}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '128kbps'}`, m)
                 satria.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: fgclink })
             }
@@ -2038,18 +2114,18 @@ break
             case 'getvideo': {
                 let { ytv } = require('./lib/y2mate')
                 if (!text) throw `Example : ${prefix + command} 1`
-                if (!m.quoted) return m.reply('Reply Pesan')
+                if (!m.quoted) return reply('Reply Pesan')
                 if (!m.quoted.isBaileys) throw `Hanya Bisa Membalas Pesan Dari Bot`
                 let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?youtube\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
                 if (!urls) throw `Mungkin pesan yang anda reply tidak mengandung result ytsearch`
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(urls[text - 1], quality)
-                if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
+                if (media.filesize >= 100000) return reply('File Melebihi Batas '+util.format(media))
                 satria.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${urls[text - 1]}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '360p'}` }, { quoted: fgclink })
             }
             break
             case 'pinterest': {
-                m.reply(mess.wait)
+                reply(mess.wait)
 		let { pinterest } = require('./lib/scraper')
                 anu = await pinterest(text)
                 result = anu[Math.floor(Math.random() * anu.length)]
@@ -2057,7 +2133,7 @@ break
             }
             break
             case 'anime': case 'husbu': case 'shinobu': case 'megumin': case 'waifu': case 'neko': case 'trap': case 'blowjob': {
-                m.reply(mess.wait)
+                reply(mess.wait)
                 let buttons = [
                     {buttonId: `.${command}`, buttonText: {displayText: `Next ${command}`}, type: 1}
                 ]
@@ -2072,7 +2148,7 @@ break
             }
             break
             case 'neko': {
-                m.reply(mess.wait)
+                reply(mess.wait)
                 let buttons = [
                     {buttonId: `.${command}`, buttonText: {displayText: `Next ${command}`}, type: 1}
                 ]
@@ -2087,7 +2163,7 @@ break
             }
             break
             case 'fox': {
-                m.reply(mess.wait)
+                reply(mess.wait)
                 let buttons = [
                     {buttonId: `.${command}`, buttonText: {displayText: `Next ${command}`}, type: 1}
                 ]
@@ -2102,7 +2178,7 @@ break
             }
             break
             case 'wallpaperanime': case 'wppanime':{
-                m.reply(mess.wait)
+                reply(mess.wait)
                 let buttons = [
                     {buttonId: `.${command}`, buttonText: {displayText: `Next ${command}`}, type: 1}
                 ]
@@ -2119,7 +2195,7 @@ break
             case 'is': case 'imgsearch':{
             	if (!text) throw `Input The Query`
          let anu = `https://zenzapis.xyz/searching/gimage2?query=${q}&apikey=satria`
-            m.reply(mess.wait)
+            reply(mess.wait)
                 let buttons = [
                     {buttonId: `${command} ${q}`, buttonText: {displayText: `Next ${q}`}, type: 1}
                 ]
@@ -2134,7 +2210,7 @@ break
             }
             break
 	    case 'couple': case 'cp': {
-                m.reply(mess.wait)
+                reply(mess.wait)
                 let anu = await fetchJson('https://zenzapis.xyz/randomanime/couples?apikey=satria')
                 let random = anu[Math.floor(Math.random() * anu.length)]
                 satria.sendMessage(m.chat, { image: { url: anu.result.male }, caption: `Couple Male` }, { quoted: fgclink })
@@ -2328,33 +2404,33 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
             break
             case '3dchristmas': case '3ddeepsea': case 'americanflag': case '3dscifi': case '3drainbow': case '3dwaterpipe': case 'halloweenskeleton': case 'sketch': case 'bluecircuit': case 'space': case 'metallic': case 'fiction': case 'greenhorror': case 'transformer': case 'berry': case 'thunder': case 'magma': case '3dcrackedstone': case '3dneonlight': case 'impressiveglitch': case 'naturalleaves': case 'fireworksparkle': case 'matrix': case 'dropwater':  case 'harrypotter': case 'foggywindow': case 'neondevils': case 'christmasholiday': case '3dgradient': case 'blackpink': case 'gluetext': {
                 if (!text) throw `Example : ${prefix + command} text`
-                m.reply(mess.wait)
+                reply(mess.wait)
                 satria.sendMessage(m.chat, { image: { url: api('zenz', '/textpro/' + command, { text: text }, 'apikey') }, caption: `Text Pro ${command}` }, { quoted: m})
 	    }
             break
 	    case 'shadow': case 'romantic': case 'smoke': case 'burnpapper': case 'naruto': case 'lovemsg': case 'grassmsg': case 'lovetext': case 'coffecup': case 'butterfly': case 'harrypotter': case 'retrolol': {
                 if (!text) throw 'No Query Text'
-                m.reply(mess.wait)
+                reply(mess.wait)
                 satria.sendMessage(m.chat, { image: { url: api('zenz', '/photooxy/' + command, { text: text }, 'apikey') }, caption: `Photo Oxy ${command}` }, { quoted: fgclink })
             }
             break
             case 'ffcover': case 'crossfire': case 'galaxy': case 'glass': case 'neon': case 'beach': case 'blackpink': case 'igcertificate': case 'ytcertificate': {
                 if (!text) throw 'No Query Text'
-                m.reply(mess.wait)
+                reply(mess.wait)
                 satria.sendMessage(m.chat, { image: { url: api('zenz', '/ephoto/' + command, { text: text }, 'apikey') }, caption: `Ephoto ${command}` }, { quoted: fgclink })
             }
             break
 	    case 'nomerhoki': case 'nomorhoki': {
                 if (!Number(text)) throw `Example : ${prefix + command} 6288292024190`
                 let anu = await primbon.nomer_hoki(Number(text))
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Nomor HP :* ${anu.message.nomer_hp}\n⭔ *Angka Shuzi :* ${anu.message.angka_shuzi}\n⭔ *Energi Positif :*\n- Kekayaan : ${anu.message.energi_positif.kekayaan}\n- Kesehatan : ${anu.message.energi_positif.kesehatan}\n- Cinta : ${anu.message.energi_positif.cinta}\n- Kestabilan : ${anu.message.energi_positif.kestabilan}\n- Persentase : ${anu.message.energi_positif.persentase}\n⭔ *Energi Negatif :*\n- Perselisihan : ${anu.message.energi_negatif.perselisihan}\n- Kehilangan : ${anu.message.energi_negatif.kehilangan}\n- Malapetaka : ${anu.message.energi_negatif.malapetaka}\n- Kehancuran : ${anu.message.energi_negatif.kehancuran}\n- Persentase : ${anu.message.energi_negatif.persentase}`, m)
             }
             break
             case 'artimimpi': case 'tafsirmimpi': {
                 if (!text) throw `Example : ${prefix + command} belanja`
                 let anu = await primbon.tafsir_mimpi(text)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Mimpi :* ${anu.message.mimpi}\n⭔ *Arti :* ${anu.message.arti}\n⭔ *Solusi :* ${anu.message.solusi}`, m)
             }
             break
@@ -2362,7 +2438,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_jodoh(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Nama Anda :* ${anu.message.nama_anda.nama}\n⭔ *Lahir Anda :* ${anu.message.nama_anda.tgl_lahir}\n⭔ *Nama Pasangan :* ${anu.message.nama_pasangan.nama}\n⭔ *Lahir Pasangan :* ${anu.message.nama_pasangan.tgl_lahir}\n⭔ *Hasil :* ${anu.message.result}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
@@ -2370,7 +2446,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_jodoh_bali(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Nama Anda :* ${anu.message.nama_anda.nama}\n⭔ *Lahir Anda :* ${anu.message.nama_anda.tgl_lahir}\n⭔ *Nama Pasangan :* ${anu.message.nama_pasangan.nama}\n⭔ *Lahir Pasangan :* ${anu.message.nama_pasangan.tgl_lahir}\n⭔ *Hasil :* ${anu.message.result}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
@@ -2378,7 +2454,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.suami_istri(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Nama Suami :* ${anu.message.suami.nama}\n⭔ *Lahir Suami :* ${anu.message.suami.tgl_lahir}\n⭔ *Nama Istri :* ${anu.message.istri.nama}\n⭔ *Lahir Istri :* ${anu.message.istri.tgl_lahir}\n⭔ *Hasil :* ${anu.message.result}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
@@ -2386,14 +2462,14 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_cinta(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Nama Anda :* ${anu.message.nama_anda.nama}\n⭔ *Lahir Anda :* ${anu.message.nama_anda.tgl_lahir}\n⭔ *Nama Pasangan :* ${anu.message.nama_pasangan.nama}\n⭔ *Lahir Pasangan :* ${anu.message.nama_pasangan.tgl_lahir}\n⭔ *Sisi Positif :* ${anu.message.sisi_positif}\n⭔ *Sisi Negatif :* ${anu.message.sisi_negatif}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             case 'artinama': {
                 if (!text) throw `Example : ${prefix + command} Dika Ardianta`
                 let anu = await primbon.arti_nama(text)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Nama :* ${anu.message.nama}\n⭔ *Arti :* ${anu.message.arti}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
@@ -2401,7 +2477,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005`
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.kecocokan_nama(nama, tgl, bln, thn)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Nama :* ${anu.message.nama}\n⭔ *Lahir :* ${anu.message.tgl_lahir}\n⭔ *Life Path :* ${anu.message.life_path}\n⭔ *Destiny :* ${anu.message.destiny}\n⭔ *Destiny Desire :* ${anu.message.destiny_desire}\n⭔ *Personality :* ${anu.message.personality}\n⭔ *Persentase :* ${anu.message.persentase_kecocokan}`, m)
             }
             break
@@ -2409,7 +2485,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} Dika|Novia`
                 let [nama1, nama2] = text.split`|`
                 let anu = await primbon.kecocokan_nama_pasangan(nama1, nama2)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendImage(m.chat,  anu.message.gambar, `⭔ *Nama Anda :* ${anu.message.nama_anda}\n⭔ *Nama Pasangan :* ${anu.message.nama_pasangan}\n⭔ *Sisi Positif :* ${anu.message.sisi_positif}\n⭔ *Sisi Negatif :* ${anu.message.sisi_negatif}`, m)
             }
             break
@@ -2417,7 +2493,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} 6, 12, 2020`
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.tanggal_jadian_pernikahan(tgl, bln, thn)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Tanggal Pernikahan :* ${anu.message.tanggal}\n⭔ *karakteristik :* ${anu.message.karakteristik}`, m)
             }
             break
@@ -2425,7 +2501,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!ext)throw `Example : ${prefix+ command} 28, 12, 2021`
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.sifat_usaha_bisnis(tgl, bln, thn)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Lahir :* ${anu.message.hari_lahir}\n⭔ *Usaha :* ${anu.message.usaha}`, m)
             }
             break
@@ -2433,7 +2509,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.rejeki_hoki_weton(tgl, bln, thn)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Lahir :* ${anu.message.hari_lahir}\n⭔ *Rezeki :* ${anu.message.rejeki}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
@@ -2441,7 +2517,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.pekerjaan_weton_lahir(tgl, bln, thn)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Lahir :* ${anu.message.hari_lahir}\n⭔ *Pekerjaan :* ${anu.message.pekerjaan}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
@@ -2449,7 +2525,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : 7, 7, 2005`
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.ramalan_nasib(tgl, bln, thn)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Analisa :* ${anu.message.analisa}\n⭔ *Angka Akar :* ${anu.message.angka_akar}\n⭔ *Sifat :* ${anu.message.sifat}\n⭔ *Elemen :* ${anu.message.elemen}\n⭔ *Angka Keberuntungan :* ${anu.message.angka_keberuntungan}`, m)
             }
             break
@@ -2457,7 +2533,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.cek_potensi_penyakit(tgl, bln, thn)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Analisa :* ${anu.message.analisa}\n⭔ *Sektor :* ${anu.message.sektor}\n⭔ *Elemen :* ${anu.message.elemen}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
@@ -2465,7 +2541,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.arti_kartu_tarot(tgl, bln, thn)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendImage(m.chat, anu.message.image, `⭔ *Lahir :* ${anu.message.tgl_lahir}\n⭔ *Simbol Tarot :* ${anu.message.simbol_tarot}\n⭔ *Arti :* ${anu.message.arti}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
@@ -2473,7 +2549,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} Dika, 1, 2005\n\nNote : ${prefix + command} Nama, gender, tahun lahir\nGender : 1 untuk laki-laki & 2 untuk perempuan`
                 let [nama, gender, tahun] = text.split`,`
                 let anu = await primbon.perhitungan_feng_shui(nama, gender, tahun)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Nama :* ${anu.message.nama}\n⭔ *Lahir :* ${anu.message.tahun_lahir}\n⭔ *Gender :* ${anu.message.jenis_kelamin}\n⭔ *Angka Kua :* ${anu.message.angka_kua}\n⭔ *Kelompok :* ${anu.message.kelompok}\n⭔ *Karakter :* ${anu.message.karakter}\n⭔ *Sektor Baik :* ${anu.message.sektor_baik}\n⭔ *Sektor Buruk :* ${anu.message.sektor_buruk}`, m)
             }
             break
@@ -2481,7 +2557,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.petung_hari_baik(tgl, bln, thn)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Lahir :* ${anu.message.tgl_lahir}\n⭔ *Kala Tinantang :* ${anu.message.kala_tinantang}\n⭔ *Info :* ${anu.message.info}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
@@ -2489,7 +2565,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.hari_sangar_taliwangke(tgl, bln, thn)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Lahir :* ${anu.message.tgl_lahir}\n⭔ *Hasil :* ${anu.message.result}\n⭔ *Info :* ${anu.message.info}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
@@ -2497,7 +2573,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.primbon_hari_naas(tgl, bln, thn)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Hari Lahir :* ${anu.message.hari_lahir}\n⭔ *Tanggal Lahir :* ${anu.message.tgl_lahir}\n⭔ *Hari Naas :* ${anu.message.hari_naas}\n⭔ *Info :* ${anu.message.catatan}\n⭔ *Catatan :* ${anu.message.info}`, m)
             }
             break
@@ -2505,7 +2581,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.rahasia_naga_hari(tgl, bln, thn)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Hari Lahir :* ${anu.message.hari_lahir}\n⭔ *Tanggal Lahir :* ${anu.message.tgl_lahir}\n⭔ *Arah Naga Hari :* ${anu.message.arah_naga_hari}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
@@ -2513,7 +2589,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.primbon_arah_rejeki(tgl, bln, thn)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Hari Lahir :* ${anu.message.hari_lahir}\n⭔ *tanggal Lahir :* ${anu.message.tgl_lahir}\n⭔ *Arah Rezeki :* ${anu.message.arah_rejeki}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
@@ -2521,7 +2597,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} DIka, 7, 7, 2005, 2022\n\nNote : ${prefix + command} Nama, tanggal lahir, bulan lahir, tahun lahir, untuk tahun`
                 let [nama, tgl, bln, thn, untuk] = text.split`,`
                 let anu = await primbon.ramalan_peruntungan(nama, tgl, bln, thn, untuk)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Nama :* ${anu.message.nama}\n⭔ *Lahir :* ${anu.message.tgl_lahir}\n⭔ *Peruntungan Tahun :* ${anu.message.peruntungan_tahun}\n⭔ *Hasil :* ${anu.message.result}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
@@ -2529,7 +2605,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.weton_jawa(tgl, bln, thn)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Tanggal :* ${anu.message.tanggal}\n⭔ *Jumlah Neptu :* ${anu.message.jumlah_neptu}\n⭔ *Watak Hari :* ${anu.message.watak_hari}\n⭔ *Naga Hari :* ${anu.message.naga_hari}\n⭔ *Jam Baik :* ${anu.message.jam_baik}\n⭔ *Watak Kelahiran :* ${anu.message.watak_kelahiran}`, m)
             }
             break
@@ -2537,7 +2613,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005`
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.sifat_karakter_tanggal_lahir(nama, tgl, bln, thn)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Nama :* ${anu.message.nama}\n⭔ *Lahir :* ${anu.message.tgl_lahir}\n⭔ *Garis Hidup :* ${anu.message.garis_hidup}`, m)
             }
             break
@@ -2545,7 +2621,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005`
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.potensi_keberuntungan(nama, tgl, bln, thn)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Nama :* ${anu.message.nama}\n⭔ *Lahir :* ${anu.message.tgl_lahir}\n⭔ *Hasil :* ${anu.message.result}`, m)
             }
             break
@@ -2553,7 +2629,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} 12, 1, 2022`
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.primbon_memancing_ikan(tgl, bln, thn)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Tanggal :* ${anu.message.tgl_memancing}\n⭔ *Hasil :* ${anu.message.result}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
@@ -2561,7 +2637,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 if (!text) throw `Example : ${prefix + command} 12, 1, 2022, 28\n\nNote : ${prefix + command} hari pertama menstruasi, siklus`
                 let [tgl, bln, thn, siklus] = text.split`,`
                 let anu = await primbon.masa_subur(tgl, bln, thn, siklus)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Hasil :* ${anu.message.result}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
@@ -2596,66 +2672,66 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
                 let zodiac = await getZodiac(birth[1], birth[2])
                 
                 let anu = await primbon.zodiak(zodiac)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Zodiak :* ${anu.message.zodiak}\n⭔ *Nomor :* ${anu.message.nomor_keberuntungan}\n⭔ *Aroma :* ${anu.message.aroma_keberuntungan}\n⭔ *Planet :* ${anu.message.planet_yang_mengitari}\n⭔ *Bunga :* ${anu.message.bunga_keberuntungan}\n⭔ *Warna :* ${anu.message.warna_keberuntungan}\n⭔ *Batu :* ${anu.message.batu_keberuntungan}\n⭔ *Elemen :* ${anu.message.elemen_keberuntungan}\n⭔ *Pasangan Zodiak :* ${anu.message.pasangan_zodiak}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             case 'shio': {
                 if (!text) throw `Example : ${prefix + command} tikus\n\nNote : For Detail https://primbon.com/shio.htm`
                 let anu = await primbon.shio(text)
-                if (anu.status == false) return m.reply(anu.message)
+                if (anu.status == false) return reply(anu.message)
                 satria.sendText(m.chat, `⭔ *Hasil :* ${anu.message}`, m)
             }
             break
 	    case 'stalker': case 'stalk': {
-		if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply('Limit Harian Anda Telah Habis')
-                if (!text) return m.reply(`Example : ${prefix +command} type id\n\nList Type :\n1. ff (Free Fire)\n2. ml (Mobile Legends)\n3. aov (Arena Of Valor)\n4. cod (Call Of Duty)\n5. pb (point Blank)\n6. ig (Instagram)\n7. npm (https://npmjs.com)`)
+		if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply('Limit Harian Anda Telah Habis')
+                if (!text) return reply(`Example : ${prefix +command} type id\n\nList Type :\n1. ff (Free Fire)\n2. ml (Mobile Legends)\n3. aov (Arena Of Valor)\n4. cod (Call Of Duty)\n5. pb (point Blank)\n6. ig (Instagram)\n7. npm (https://npmjs.com)`)
                 let [type, id, zone] = args
                 if (type.toLowerCase() == 'ff') {
                     if (!id) throw `No Query id, Example ${prefix + command} ff 552992060`
                     let anu = await fetchJson(api('zenz', '/api/nickff', { apikey: global.APIKeys[global.APIs['zenz']], query: id }))
-                    if (anu.status == false) return m.reply(anu.result.message)
-                    m.reply(`ID : ${anu.result.gameId}\nUsername : ${anu.result.userName}`)
+                    if (anu.status == false) return reply(anu.result.message)
+                    reply(`ID : ${anu.result.gameId}\nUsername : ${anu.result.userName}`)
 		    db.data.users[m.sender].limit -= 1
                 } else if (type.toLowerCase() == 'ml') {
                     if (!id) throw `No Query id, Example : ${prefix + command} ml 214885010 2253`
                     if (!zone) throw `No Query id, Example : ${prefix + command} ml 214885010 2253`
                     let anu = await fetchJson(api('zenz', '/api/nickml', { apikey: global.APIKeys[global.APIs['zenz']], query: id, query2: zone }))
-                    if (anu.status == false) return m.reply(anu.result.message)
-                    m.reply(`ID : ${anu.result.gameId}\nZone : ${anu.result.zoneId}\nUsername : ${anu.result.userName}`)
+                    if (anu.status == false) return reply(anu.result.message)
+                    reply(`ID : ${anu.result.gameId}\nZone : ${anu.result.zoneId}\nUsername : ${anu.result.userName}`)
 		    db.data.users[m.sender].limit -= 1
                 } else if (type.toLowerCase() == 'aov') {
                     if (!id) throw `No Query id, Example ${prefix + command} aov 293306941441181`
                     let anu = await fetchJson(api('zenz', '/api/nickaov', { apikey: global.APIKeys[global.APIs['zenz']], query: id }))
-                    if (anu.status == false) return m.reply(anu.result.message)
-                    m.reply(`ID : ${anu.result.gameId}\nUsername : ${anu.result.userName}`)
+                    if (anu.status == false) return reply(anu.result.message)
+                    reply(`ID : ${anu.result.gameId}\nUsername : ${anu.result.userName}`)
 		    db.data.users[m.sender].limit -= 1
                 } else if (type.toLowerCase() == 'cod') {
                     if (!id) throw `No Query id, Example ${prefix + command} cod 6290150021186841472`
                     let anu = await fetchJson(api('zenz', '/api/nickcod', { apikey: global.APIKeys[global.APIs['zenz']], query: id }))
-                    if (anu.status == false) return m.reply(anu.result.message)
-                    m.reply(`ID : ${anu.result.gameId}\nUsername : ${anu.result.userName}`)
+                    if (anu.status == false) return reply(anu.result.message)
+                    reply(`ID : ${anu.result.gameId}\nUsername : ${anu.result.userName}`)
 		    db.data.users[m.sender].limit -= 1
                 } else if (type.toLowerCase() == 'pb') {
                     if (!id) throw `No Query id, Example ${prefix + command} pb riio46`
                     let anu = await fetchJson(api('zenz', '/api/nickpb', { apikey: global.APIKeys[global.APIs['zenz']], query: id }))
-                    if (anu.status == false) return m.reply(anu.result.message)
-                    m.reply(`ID : ${anu.result.gameId}\nUsername : ${anu.result.userName}`)
+                    if (anu.status == false) return reply(anu.result.message)
+                    reply(`ID : ${anu.result.gameId}\nUsername : ${anu.result.userName}`)
 		    db.data.users[m.sender].limit -= 1
                 } else if (type.toLowerCase() == 'ig') {
                     if (!id) throw `No Query username, Example : ${prefix + command} ig cak_haho`
                     let { result: anu } = await fetchJson(api('zenz', '/api/stalker/ig', { username: id }, 'apikey'))
-                    if (anu.status == false) return m.reply(anu.result.message)
+                    if (anu.status == false) return reply(anu.result.message)
                     satria.sendMedia(m.chat, anu.caption.profile_hd, '', `⭔ Full Name : ${anu.caption.full_name}\n⭔ User Name : ${anu.caption.user_name}\n⭔ ID ${anu.caption.user_id}\n⭔ Followers : ${anu.caption.followers}\n⭔ Following : ${anu.caption.following}\n⭔ Bussines : ${anu.caption.bussines}\n⭔ Profesional : ${anu.caption.profesional}\n⭔ Verified : ${anu.caption.verified}\n⭔ Private : ${anu.caption.private}\n⭔ Bio : ${anu.caption.biography}\n⭔ Bio Url : ${anu.caption.bio_url}`, m)
 		    db.data.users[m.sender].limit -= 1
                 } else if (type.toLowerCase() == 'npm') {
                     if (!id) throw `No Query username, Example : ${prefix + command} npm scrape-primbon`
                     let { result: anu } = await fetchJson(api('zenz', '/api/stalker/npm', { query: id }, 'apikey'))
-                    if (anu.status == false) return m.reply(anu.result.message)
-                    m.reply(`⭔ Name : ${anu.name}\n⭔ Version : ${Object.keys(anu.versions)}\n⭔ Created : ${tanggal(anu.time.created)}\n⭔ Modified : ${tanggal(anu.time.modified)}\n⭔ Maintainers :\n ${anu.maintainers.map(v => `- ${v.name} : ${v.email}`).join('\n')}\n\n⭔ Description : ${anu.description}\n⭔ Homepage : ${anu.homepage}\n⭔ Keywords : ${anu.keywords}\n⭔ Author : ${anu.author.name}\n⭔ License : ${anu.license}\n⭔ Readme : ${anu.readme}`)
+                    if (anu.status == false) return reply(anu.result.message)
+                    reply(`⭔ Name : ${anu.name}\n⭔ Version : ${Object.keys(anu.versions)}\n⭔ Created : ${tanggal(anu.time.created)}\n⭔ Modified : ${tanggal(anu.time.modified)}\n⭔ Maintainers :\n ${anu.maintainers.map(v => `- ${v.name} : ${v.email}`).join('\n')}\n\n⭔ Description : ${anu.description}\n⭔ Homepage : ${anu.homepage}\n⭔ Keywords : ${anu.keywords}\n⭔ Author : ${anu.author.name}\n⭔ License : ${anu.license}\n⭔ Readme : ${anu.readme}`)
 		    db.data.users[m.sender].limit -= 1
                 } else {
-                    m.reply(`Example : ${prefix +command} type id\n\nList Type :\n1. ff (Free Fire)\n2. ml (Mobile Legends)\n3. aov (Arena Of Valor)\n4. cod (Call Of Duty)\n5. pb (point Blank)\n6. ig (Instagram)\n7. npm (https://npmjs.com)`)
+                    reply(`Example : ${prefix +command} type id\n\nList Type :\n1. ff (Free Fire)\n2. ml (Mobile Legends)\n3. aov (Arena Of Valor)\n4. cod (Call Of Duty)\n5. pb (point Blank)\n6. ig (Instagram)\n7. npm (https://npmjs.com)`)
                 }
             }
             break
@@ -2678,7 +2754,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
             break
             case 'xnxx': case 'xnxxdl': {
 	if (!text) throw 'Masukkan Query Link!'
-	m.reply(mess.wait)
+	reply(mess.wait)
 	let anu = await fetchJson(api('zenz', '/downloader/xvideos', { url: text }, 'apikey'))
                 satria.sendMessage(m.chat, { video: { url: anu.result.files.high, caption: 'Nih bang' } }, { quoted: floc })
                 await sleep(99)
@@ -2686,11 +2762,11 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
             }
             break
            case 'ppkul': case 'profilcool':{
-           	m.reply(`Loading...`)
+           	reply(`Loading...`)
            	 let buttons = [
                     {buttonId: `.ppkul`, buttonText: {displayText: 'Next'}, type: 1}]
                 let buttonMessage = {
-                    image: { url: thumby },
+                    image: { url: thumb },
                     caption: `Created By Satganz Devs`,
                     footer: 'Press The Button Below',
                     buttons: buttons,
@@ -2701,7 +2777,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
             break
             case 'tiktokwm': case 'tiktokwatermark': {
                 if (!text) throw 'Masukkan Query Link!'
-                m.reply(mess.wait)
+                reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/tiktok', { url: text }, 'apikey'))
                 let buttons = [
                     {buttonId: `tiktoknowm ${text}`, buttonText: {displayText: '► No Watermark'}, type: 1},
@@ -2719,7 +2795,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
             break
             case 'tiktokmp3': case 'tiktokaudio': {
                 if (!text) throw 'Masukkan Query Link!'
-                m.reply(mess.wait)
+                reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/musically', { url: text }, 'apikey'))
                 let buttons = [
                     {buttonId: `tiktoknowm ${text}`, buttonText: {displayText: '► No Watermark'}, type: 1},
@@ -2737,7 +2813,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
             break
 	        case 'instagram': case 'ig': case 'igdl': {
                 if (!text) throw 'No Query Url!'
-                m.reply(mess.wait)
+                reply(mess.wait)
                 if (/(?:\/p\/|\/reel\/|\/tv\/)([^\s&]+)/.test(isUrl(text)[0])) {
                     let anu = await fetchJson(api('zenz', '/downloader/instagram2', { url: isUrl(text)[0] }, 'apikey'))
                     for (let media of anu.data) satria.sendFileUrl(m.chat, media, `Download Url Instagram From ${isUrl(text)[0]}`, m)
@@ -2749,7 +2825,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
             break
             case 'joox': case 'jooxdl': {
                 if (!text) throw 'No Query Title'
-                m.reply(mess.wait)
+                reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/joox', { query: text }, 'apikey'))
                 let msg = await satria.sendImage(m.chat, anu.result.img, `⭔ Title : ${anu.result.lagu}\n⭔ Album : ${anu.result.album}\n⭔ Singer : ${anu.result.penyanyi}\n⭔ Publish : ${anu.result.publish}\n⭔ Lirik :\n${anu.result.lirik.result}`, m)
                 satria.sendMessage(m.chat, { audio: { url: anu.result.mp4aLink }, mimetype: 'audio/mpeg', fileName: anu.result.lagu+'.m4a' }, { quoted: msg })
@@ -2757,7 +2833,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
             break
             case 'soundcloud': case 'scdl': {
                 if (!text) throw 'No Query Title'
-                m.reply(mess.wait)
+                reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/soundcloud', { url: isUrl(text)[0] }, 'apikey'))
                 let msg = await satria.sendImage(m.chat, anu.result.thumb, `⭔ Title : ${anu.result.title}\n⭔ Url : ${isUrl(text)[0]}`)
                 satria.sendMessage(m.chat, { audio: { url: anu.result.url }, mimetype: 'audio/mpeg', fileName: anu.result.title+'.m4a' }, { quoted: msg })
@@ -2766,7 +2842,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
             case 'hentai':{
             	if (!isCreator && !isPremium) throw `Hanya Owner Dan User Premium Yang dapat mengakses Fitur ini`
             let anu = await fetchJson('https://zenzapis.xyz/downloader/hentaivid?apikey=satria')
-            m.reply(mess.wait)
+            reply(mess.wait)
                 let buttons = [
                     {buttonId: `tiktoknowm ${text}`, buttonText: {displayText: 'Next Hentai'}, type: 1}
                 ]
@@ -2832,7 +2908,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
             break
 	        case 'twitdl': case 'twitter': {
                 if (!text) throw 'Masukkan Query Link!'
-                m.reply(mess.wait)
+                reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/api/downloader/twitter', { url: text }, 'apikey'))
                 let buttons = [
                     {buttonId: `twittermp3 ${text}`, buttonText: {displayText: '► Audio'}, type: 1}
@@ -2849,7 +2925,7 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
             break
             case 'twittermp3': case 'twitteraudio': {
                 if (!text) throw 'Masukkan Query Link!'
-                m.reply(mess.wait)
+                reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/api/downloader/twitter', { url: text }, 'apikey'))
                 let buttons = [
                     {buttonId: `twitter ${text}`, buttonText: {displayText: '► Video'}, type: 1}
@@ -2867,14 +2943,14 @@ let anjay = `https://zenzapis.xyz/creator/kannagen?text=${tes1}&apikey=satria`
             break
 	        case 'fbdl': case 'fb': case 'facebook': {
                 if (!text) throw 'Masukkan Query Link!'
-                m.reply(mess.wait)
+                reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/api/downloader/facebook', { url: text }, 'apikey'))
                 satria.sendMessage(m.chat, { video: { url: anu.result.url }, caption: `⭔ Title : ${anu.result.title}`}, { quoted: fgclink })
             }
             break
 	        case 'pindl': case 'pinterestdl': {
                 if (!text) throw 'Masukkan Query Link!'
-                m.reply(mess.wait)
+                reply(mess.wait)
                 let lety =`https://zenzapis.xyz/downloader/pinterestdl?apikey=satria&url=${q}`
                 let anu = await fetchJson(lety)
                 satria.sendMessage(m.chat, { video: { url: anu.result }, caption: `Download From ${text}` }, { quoted: fgclink })
@@ -2923,24 +2999,24 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
 		oh = `Example : ${prefix + command} 3\n\nIQRA Yang tersedia : 1,2,3,4,5,6`
 		if (!text) throw oh
 		yy = await getBuffer(`https://islamic-api-indonesia.herokuapp.com/api/data/pdf/iqra${text}`)
-		satria.sendMessage(m.chat, {document: yy, mimetype: 'application/pdf', fileName: `iqra${text}.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
+		satria.sendMessage(m.chat, {document: yy, mimetype: 'application/pdf', fileName: `iqra${text}.pdf`}, {quoted:m}).catch ((err) => reply(oh))
 		}
 		break
 		case 'juzamma': {
 		if (args[0] === 'pdf') {
-		m.reply(mess.wait)
+		reply(mess.wait)
 		satria.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pdf'}, mimetype: 'application/pdf', fileName: 'juz-amma-arab-latin-indonesia.pdf'}, {quoted:m})
 		} else if (args[0] === 'docx') {
-		m.reply(mess.wait)
+		reply(mess.wait)
 		satria.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.docx'}, mimetype: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', fileName: 'juz-amma-arab-latin-indonesia.docx'}, {quoted:m})
 		} else if (args[0] === 'pptx') {
-		m.reply(mess.wait)
+		reply(mess.wait)
 		satria.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pptx'}, mimetype: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', fileName: 'juz-amma-arab-latin-indonesia.pptx'}, {quoted:m})
 		} else if (args[0] === 'xlsx') {
-		m.reply(mess.wait)
+		reply(mess.wait)
 		satria.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.xlsx'}, mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', fileName: 'juz-amma-arab-latin-indonesia.xlsx'}, {quoted:m})
 		} else {
-		m.reply(`Mau format apa ? Example : ${prefix + command} pdf
+		reply(`Mau format apa ? Example : ${prefix + command} pdf
 
 Format yang tersedia : pdf, docx, pptx, xlsx`)
 		}
@@ -2972,13 +3048,13 @@ muslim
 		try {
 		let res = await fetchJson(`https://islamic-api-indonesia.herokuapp.com/api/data/json/hadith/${args[0]}`)
 		let { number, arab, id } = res.find(v => v.number == args[1])
-		m.reply(`No. ${number}
+		reply(`No. ${number}
 
 ${arab}
 
 ${id}`)
 		} catch (e) {
-		m.reply(`Hadis tidak ditemukan !`)
+		reply(`Hadis tidak ditemukan !`)
 		}
 		}
 		break
@@ -2991,7 +3067,7 @@ ${id}`)
 *Indonesia* : ${res.result.data.translation.id}
 
 ( Q.S ${res.result.data.surah.name.transliteration.id} : ${res.result.data.number.inSurah} )`
-		m.reply(txt)
+		reply(txt)
 		satria.sendMessage(m.chat, {audio: { url: res.result.data.audio.primary }, mimetype: 'audio/mpeg'}, { quoted : fgclink })
 		}
 		break
@@ -3006,7 +3082,7 @@ ${id}`)
 *Panjang* : ${res.result.data.tafsir.id.long}
 
 ( Q.S ${res.result.data.surah.name.transliteration.id} : ${res.result.data.number.inSurah} )`
-		m.reply(txt)
+		reply(txt)
 		}
 		break
 		   case 'bass': case 'blown': case 'deep': case 'earrape': case 'fast': case 'fat': case 'nightcore': case 'reverse': case 'robot': case 'slow': case 'smooth': case 'tupai':
@@ -3025,19 +3101,19 @@ ${id}`)
                 if (/smooth/.test(command)) set = '-filter:v "minterpolate=\'mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=120\'"'
                 if (/tupai/.test(command)) set = '-filter:a "atempo=0.5,asetrate=65100"'
                 if (/audio/.test(mime)) {
-                m.reply(mess.wait)
+                reply(mess.wait)
                 let media = await satria.downloadAndSaveMediaMessage(quoted)
                 let ran = getRandom('.mp3')
                 exec(`ffmpeg -i ${media} ${set} ${ran}`, (err, stderr, stdout) => {
                 fs.unlinkSync(media)
-                if (err) return m.reply(err)
+                if (err) return reply(err)
                 let buff = fs.readFileSync(ran)
                 satria.sendMessage(m.chat, { audio: buff, mimetype: 'audio/mpeg' }, { quoted : fgclink })
                 fs.unlinkSync(ran)
                 })
-                } else m.reply(`Balas audio yang ingin diubah dengan caption *${prefix + command}*`)
+                } else reply(`Balas audio yang ingin diubah dengan caption *${prefix + command}*`)
                 } catch (e) {
-                m.reply(e)
+                reply(e)
                 }
                 break
             case 'setcmd': {
@@ -3053,7 +3129,7 @@ ${id}`)
                     at: + new Date,
                     locked: false,
                 }
-                m.reply(`Done!`)
+                reply(`Done!`)
             }
             break
             case 'delcmd': {
@@ -3061,7 +3137,7 @@ ${id}`)
                 if (!hash) throw `Tidak ada hash`
                 if (global.db.data.sticker[hash] && global.db.data.sticker[hash].locked) throw 'You have no permission to delete this sticker command'              
                 delete global.db.data.sticker[hash]
-                m.reply(`Done!`)
+                reply(`Done!`)
             }
             break
             case 'listcmd': {
@@ -3080,7 +3156,7 @@ ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index +
                 let hash = m.quoted.fileSha256.toString('base64')
                 if (!(hash in global.db.data.sticker)) throw 'Hash not found in database'
                 global.db.data.sticker[hash].locked = !/^un/i.test(command)
-                m.reply('Done!')
+                reply('Done!')
             }
             break
             case 'addmsg': {
@@ -3089,7 +3165,7 @@ ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index +
                 let msgs = global.db.data.database
                 if (text.toLowerCase() in msgs) throw `'${text}' telah terdaftar di list pesan`
                 msgs[text.toLowerCase()] = quoted.fakeObj
-m.reply(`Berhasil menambahkan pesan di list pesan sebagai '${text}'
+reply(`Berhasil menambahkan pesan di list pesan sebagai '${text}'
     
 Akses dengan ${prefix}getmsg ${text}
 
@@ -3110,18 +3186,18 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
 		for (let i of seplit) {
 		    teks += `⬡ *Name :* ${i.nama}\n⬡ *Type :* ${getContentType(i.message).replace(/Message/i, '')}\n────────────────────────\n\n`
 	        }
-	        m.reply(teks)
+	        reply(teks)
 	    }
 	    break
             case 'delmsg': case 'deletemsg': {
 	        let msgs = global.db.data.database
-	        if (!(text.toLowerCase() in msgs)) return m.reply(`'${text}' tidak terdaftar didalam list pesan`)
+	        if (!(text.toLowerCase() in msgs)) return reply(`'${text}' tidak terdaftar didalam list pesan`)
 		delete msgs[text.toLowerCase()]
-		m.reply(`Berhasil menghapus '${text}' dari list pesan`)
+		reply(`Berhasil menghapus '${text}' dari list pesan`)
             }
 	    break
 	    case 'anonymous': {
-                if (m.isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
+                if (m.isGroup) return reply('Fitur Tidak Dapat Digunakan Untuk Group!')
 				this.anonymous = this.anonymous ? this.anonymous : {}
 				let buttons = [
                     { buttonId: 'start', buttonText: { displayText: 'Start' }, type: 1 }
@@ -3130,7 +3206,7 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
             }
 			break
             case 'keluar': case 'leave': {
-                if (m.isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
+                if (m.isGroup) return reply('Fitur Tidak Dapat Digunakan Untuk Group!')
                 this.anonymous = this.anonymous ? this.anonymous : {}
                 let room = Object.values(this.anonymous).find(room => room.check(m.sender))
                 if (!room) {
@@ -3140,14 +3216,14 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                     await satria.sendButtonText(m.chat, buttons, `\`\`\`Kamu Sedang Tidak Berada Di Sesi Anonymous, Tekan Button Untuk Mencari Partner \`\`\``)
                     throw false
                 }
-                m.reply('Ok')
+                reply('Ok')
                 let other = room.other(m.sender)
                 if (other) await satria.sendText(other, `\`\`\`Partner Telah Meninggalkan Sesi Anonymous\`\`\``, m)
                 delete this.anonymous[room.id]
                 if (command === 'leave') break
             }
             case 'mulai': case 'start': {
-                if (m.isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
+                if (m.isGroup) return reply('Fitur Tidak Dapat Digunakan Untuk Group!')
                 this.anonymous = this.anonymous ? this.anonymous : {}
                 if (Object.values(this.anonymous).find(room => room.check(m.sender))) {
                     let buttons = [
@@ -3188,7 +3264,7 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
                 break
             }
             case 'next': case 'lanjut': {
-                if (m.isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
+                if (m.isGroup) return reply('Fitur Tidak Dapat Digunakan Untuk Group!')
                 this.anonymous = this.anonymous ? this.anonymous : {}
                 let romeo = Object.values(this.anonymous).find(room => room.check(m.sender))
                 if (!romeo) {
@@ -3235,13 +3311,13 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
             case 'public': {
                 if (!isCreator) throw mess.owner
                 satria.public = true
-                m.reply('Sukse Change To Public Usage')
+                reply('Sukse Change To Public Usage')
             }
             break
             case 'self': {
                 if (!isCreator) throw mess.owner
                 satria.public = false
-                m.reply('Sukses Change To Self Usage')
+                reply('Sukses Change To Self Usage')
             }
             break
             case 'ping': case 'botstatus': case 'statusbot': {
@@ -3288,11 +3364,11 @@ ${cpus[0].model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type =>
 _CPU Core(s) Usage (${cpus.length} Core CPU)_
 ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}`).join('\n\n')}` : ''}
                 `.trim()
-                m.reply(respon)
+                reply(respon)
             }
             break
             case 'speedtest': {
-            m.reply('Testing Speed...')
+            reply('Testing Speed...')
             let cp = require('child_process')
             let { promisify } = require('util')
             let exec = promisify(cp.exec).bind(cp)
@@ -3303,8 +3379,8 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
           o = e
          } finally {
         let { stdout, stderr } = o
-        if (stdout.trim()) m.reply(stdout)
-        if (stderr.trim()) m.reply(stderr)
+        if (stdout.trim()) reply(stdout)
+        if (stderr.trim()) reply(stderr)
             }
             }
             break
@@ -3327,7 +3403,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                                     id: 'menu'
                                     }  
                                 }]
-	satria.send5ButImg(m.chat,`Halo kak ${pushname} - ${ucapan} itu owner ku, ingin tau lebih banyak?`, `© satria`, thumby, btn)
+	satria.send5ButImg(m.chat,`Halo kak ${pushname} - ${ucapan} itu owner ku, ingin tau lebih banyak?`, `© satria`, thumb, btn)
             }
             break
             case 'playstore': {
@@ -3340,7 +3416,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             teks += `⭔ Developer : ${i.developer}\n`
             teks += `⭔ Link Developer : ${i.link_dev}\n\n──────────────────────\n`
             }
-            m.reply(teks)
+            reply(teks)
             }
             break
             case 'gsmarena': {
@@ -3427,7 +3503,7 @@ let capt = `⭔ Title: ${judul}
             capt += `⭔ Genre: ${i.genre}\n`
             capt += `⭔ Url: ${i.url}\n\n──────────────────────\n`
             }
-            m.reply(capt)
+            reply(capt)
             }
             break
             case 'drakor': {
@@ -3452,25 +3528,25 @@ let capt = `⭔ Title: ${judul}
                 setbot.templateVideo = false
                 setbot.templateGif = false
                 setbot.templateMsg = false
-                m.reply(mess.success)
+                reply(mess.success)
                 } else if (args[0] === 'templateVideo'){
                 setbot.templateImage = false
                 setbot.templateVideo = true
                 setbot.templateGif = false
                 setbot.templateMsg = false
-                m.reply(mess.success)
+                reply(mess.success)
                 } else if (args[0] === 'templateGif'){
                 setbot.templateImage = false
                 setbot.templateVideo = false
                 setbot.templateGif = true
                 setbot.templateMsg = false
-                m.reply(mess.success)
+                reply(mess.success)
                 } else if (args[0] === 'templateMessage'){
                 setbot.templateImage = false
                 setbot.templateVideo = false
                 setbot.templateGif = false
                 setbot.templateMsg = true
-                m.reply(mess.success)
+                reply(mess.success)
                 } else {
                 let sections = [
                 {
@@ -3878,7 +3954,7 @@ Date : ${salam}
                             }]
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        satria.send5ButImg(m.chat, anu, `© Created By Satganz Devs`, thumby, btn, { quoted : floc })
+                        satria.send5ButImg(m.chat, anu, `© Created By Satganz Devs`, thumb, btn, { quoted : floc })
                         } else if (setbot.templateGif) {
                         satria.send5ButGif(m.chat, anu, `© Created By Satganz Devs`, vitum, btn, { quoted : floc })
                         } else if (setbot.templateVid) {
@@ -3913,7 +3989,7 @@ Date : ${salam}
             }
             break
             case 'mess': case 'c': case 'chat': case 'kirim':{
-            	if (!text) throw `Examples of use : ${command} *>Name of the sender <*|Destination number|*>Message<*`
+            	if (!text) throw reply (`Examples of use : ${command} *>Name of the sender <*|Destination number|*>Message<*`)
 let bekk = m.sender
 let pk = pushname
 let bebek = bekk.replace(/[@s.whatsapnet]/g, "").replace(/[@S.WHATSAPNET]/g, "")
@@ -3921,15 +3997,11 @@ let frome = text.split("|")[0]
 let orang = text.split("|")[1]
 let pesann = text.split("|")[2]
 let butt =[{ buttonId: `markread ${pushname}|${bebek}|Congrats \n${pk}/${orang} Read Your Message!!`, buttonText: { displayText: 'Tandai Telah Di Baca' }, type: 1 }]
-rply(`Sending Message : ${pesann} To : ${orang} From : ${frome}`)
+reply(`Sending Message : ${pesann} To : ${orang} From : ${frome}`)
 	await satria.sendButtonText(`${orang}@s.whatsapp.net`, butt, pesann,`Message From : ${frome}`, m)
 }
-rply('Success')
+reply('Success')
 break
-case 'tanggal':{
-	ply(time)
-	}
-	break
 case 'markread':{
 	let frome = text.split("|")[0]
 let orang = text.split("|")[1]
@@ -3937,34 +4009,34 @@ let pesann = text.split("|")[2]
 let butt =[{ buttonId: 'u', buttonText: { displayText: 'Alhamdulillah' }, type: 1 }]
 	await satria.sendButtonText(`${orang}@s.whatsapp.net`, butt, pesann,`Message From : ${frome}`, m)
 }
-m.reply('Success')
+reply('Success')
 break
             case 'hitungmundur': case 'stopwatch': case 'sw':{
             	waktu = args.join(" ")
-            m.reply(`*${command}* Dimulai`)
+            reply(`*${command}* Dimulai`)
             await sleep(`${waktu}000`)
-            m.reply(`*${command}* Berakhir`)
+            reply(`*${command}* Berakhir`)
             }
             break
            case 'spam':{
-if (!text) throw m.reply(`Examples of use : ${command} *>Message<*|>Destination number<|*>Amount<*`) 
+if (!text) throw reply(`Examples of use : ${command} *>Message<*|>Destination number<|*>Amount<*`) 
 let spar = text.split("|")[0]
 let terern = text.split("|")[1]
 let jumpeh = text.split("|")[2]
 var satgnz = "6281316701742"
 let isLinkThisGc = new RegExp(satgnz, 'i')
 let isgclink = isLinkThisGc.test(m.text)
- if (isgclink) return m.reply(`You Can't Spam My Owner`)
-if (!jumpeh) throw m.reply(`Examples of use : ${command} *>Message<*|>Destination number<|*>Amount<*`)
-if (Number(jumpeh) >= 100) throw m.reply('Most!')
-if (isNaN(jumpeh)) throw m.reply(`Must be a number `)
+ if (isgclink) return reply(`You Can't Spam My Owner`)
+if (!jumpeh) throw reply(`Examples of use : ${command} *>Message<*|>Destination number<|*>Amount<*`)
+if (Number(jumpeh) >= 100) throw reply('Most!')
+if (isNaN(jumpeh)) throw reply(`Must be a number `)
 for (let i = 0; i < jumpeh; i++){
 satria.sendMessage(`${terern}@s.whatsapp.net`, {text:spar})
 }
 }
 break
 case 'carbon':{
-	if (!text) throw m.reply('Input text')
+	if (!text) throw reply('Input text')
 	let res = await fetchJson(`https://api-rull.herokuapp.com/api/cmd?code=${q}`)
 	satria.sendMessage(m.chat, { image: { url: res.url }}, { quoted: m })
 	}
@@ -3999,15 +4071,11 @@ let noget = nomore.replace(/[@s.whatsapnet]/g, "").replace(/[@S.WHATSAPNET]/g, "
 var satgnz = "6281316701742"
 let isnoown = new RegExp(satgnz, 'i')
 let isOwn = isnoown.test(m.text)
- if (isOwn) return m.reply(`You Can't ${command} My Owner Bitch!`)
- var satgnzz = "6281266891985"
-let isnobot = new RegExp(satgnzz, 'i')
-let isBot = isnobot.test(m.text)
- if (isBot) return m.reply(`You Can't ${command} Me Bitch!`)
+ if (isOwn) return reply(`You Can't ${command} My Owner Bitch!`)
  {
  let sections = [
                 {
-                title: "MENIT",
+                title: "MINUTES",
                 rows: [
                 {title: "1 Minute", rowId: `.atk ${noget}|1`, description: `Attack ${noget} During 1 Minute `},
                 {title: "2 Minute", rowId: `.atk ${noget}|2`, description: `Attack ${noget} During 2 Minute`},
@@ -4042,21 +4110,25 @@ let isBot = isnobot.test(m.text)
             }
             break
 		case 'atk':{
-		if (!text) throw m.reply(`Examples of use : ${command} >Target<|*>Amount<*`) 
+		if (!text) throw reply(`Examples of use : ${command} >Target<|*>Amount<*`) 
 let spar = text.split("|")[0]
 let terern = text.split("|")[1]
 var satgnz = "6281316701742"
 let isLinkThisGc = new RegExp(satgnz, 'i')
 let isgclink = isLinkThisGc.test(m.text)
- if (isgclink) return m.reply(`You Can't Attack My Owner`)
-if (!terern) throw m.reply(`Examples of use : ${command} *>Target<*|*>Amount<*`)
-if (isNaN(terern)) throw m.reply(`Must be a number `)
+ if (isgclink) return reply(`You Can't Attack My Owner`)
+if (!terern) throw reply(`Examples of use : ${command} *>Target<*|*>Amount<*`)
+if (isNaN(terern)) throw reply(`Must be a number `)
 for (let i = 0; i < terern; i++){
-satria.sendMessage(`${spar}@s.whatsapp.net`, { text: `p`, contextInfo:{"externalAdReply": {"title": ` hehe`,"body": ` hehe`, "previewType": "PHOTO","thumbnailUrl": `https://wa.me/6281316701742`,"thumbnail": thumby,"sourceUrl": "hehe"}}}, { quoted: virus})
+satria.sendMessage(`${spar}@s.whatsapp.net`, { text: `p`, contextInfo:{"externalAdReply": {"title": ` hehe`,"body": ` hehe`, "previewType": "PHOTO","thumbnailUrl": `https://wa.me/6281316701742`,"thumbnail": thumb,"sourceUrl": "hehe"}}}, { quoted: virus})
 }
 }
 let terern = text.split("|")[1]
-m.reply(`Sukses Attack Wa Target Selama ${terern} Menit`)
+reply(`Success Attack Target During Attack ${terern} Minutes`)
+break
+case 'ngetes':{
+		satria.sendMessage(m.chat, {text : 'Done'}, { quoted : ftextt })
+		}
 break
             default:
             if (budy.includes('pagi')) {
@@ -4067,7 +4139,7 @@ break
             satria.sendMessage(m.chat, {audio: {url : "https://a.uguu.se/JHykYYEG.mp3"}, mimetype:'audio/mpeg', ptt:true }, {quoted:floc})
             }
             if (budy.startsWith('.')) {
-            	m.reply(`Perintah *${command}* Belum Da di Daftar Menu!`)
+            	reply(`Perintah *${command}* Belum Da di Daftar Menu!`)
             await sleep(99)
             let gomen = fs.readFileSync('./media/gomen.mp3')
             satria.sendMessage(m.chat, {audio: gomen, mimetype:'audio/mpeg', ptt:true }, {quoted:floc})
@@ -4083,7 +4155,7 @@ break
                             return m.reply(bang)
                     }
                     try {
-                        m.reply(util.format(eval(`(async () => { return ${budy.slice(3)} })()`)))
+                        reply(util.format(eval(`(async () => { return ${budy.slice(3)} })()`)))
                     } catch (e) {
                         m.reply(String(e))
                     }
@@ -4103,7 +4175,7 @@ break
                 if (budy.startsWith('$')) {
                     if (!isCreator) return m.reply(mess.owner)
                     exec(budy.slice(2), (err, stdout) => {
-                        if(err) return m.reply(err)
+                        if(err) return reply(err)
                         if (stdout) return m.reply(stdout)
                     })
                 }
