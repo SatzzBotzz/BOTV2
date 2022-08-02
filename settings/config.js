@@ -45,7 +45,7 @@ global.gambar =[
 // Other
 global.web = 'https://s.satganzdevs.repl.co'
 global.owner = ['6281316701742']
-global.premium = ["6281266891985","6281266082412"]
+global.premium = ["6281266891985","6281266082412","6285715318411","6282284362628"]
 global.botname = 'Sad Bots'
 global.ownername = '𝗦𝗮𝘁𝗴𝗮𝗻𝘇 𝗗𝗲𝘃𝘀'
 global.packname = 'Sad Bot'
@@ -59,6 +59,7 @@ admin: 'Group Admin Special Features! o(´^｀)o',
 botAdmin: 'Bots Should Be Admins First! ¯_ಠ_ಠ_/¯ ',
 owner: 'Special owner bot features! (✖╭╮✖)',
 group: 'Feature Used For Group Only! (º_º) ',
+premium: 'Special Premium Users Features',
 private: 'Features Used Only For Private Chat（Ω_Ω）! ',
 bot: 'Bot Number User Special Features ( ・_・)ノ ',
 wait: 'Loading...',
