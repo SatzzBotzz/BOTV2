@@ -45,7 +45,7 @@ global.gambar =[
 // Other
 global.web = 'https://s.satganzdevs.repl.co'
 global.owner = ['6281316701742']
-global.premium = ["6281266891985","6281266082412","6285715318411","6282284362628"]
+global.premium = ["6281266891985","6281266082412","6285715318411","6282284362628","6282182518286"]
 global.botname = 'Sad Bots'
 global.ownername = '𝗦𝗮𝘁𝗴𝗮𝗻𝘇 𝗗𝗲𝘃𝘀'
 global.packname = 'Sad Bot'
