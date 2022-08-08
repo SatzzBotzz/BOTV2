@@ -150,19 +150,19 @@ async function startsatria() {
                 if (anu.action == 'add') {
                 	let buttons = [
                     {buttonId: `hi`, buttonText: {displayText: 'Welcome '}, type: 1},
-                    {buttonId: `hi`, buttonText: {displayText: '\n\n\n\n\n Iam LGBT'}, type: 1}]
+                    {buttonId: `igy`, buttonText: {displayText: '\n\n\n\n\n\n\n Iam LGBT'}, type: 1}]
                 let buttonMessage = {
                     image: { url: ppuser },
                     caption: `Welcome To ${metadata.subject} @${num.split("@")[0]} 🔥`,
-                    footer: 'Good Bye Message',
+                    footer: 'Welcome Message',
                     buttons: buttons,
                     headerType: 5
                 }
-                    satria.sendMessage(anu.id, buttonMessage)
+                    satria.sendMessage(anu.id, buttonMessage, { mentions: anu.participants })
                 } else if (anu.action == 'remove') {
                 	let buttons = [
-                      {buttonId: `hi`, buttonText: {displayText: 'Good Bye! '}, type: 1},
-                      {buttonId: `hi`, buttonText: {displayText: '\n\n\n\n\n Iam LGBT'}, type: 1}]
+                      {buttonId: `gby`, buttonText: {displayText: 'Good Bye! '}, type: 1},
+                      {buttonId: `igy`, buttonText: {displayText: '\n\n\n\n\n\n\n Iam LGBT'}, type: 1}]
                 let buttonMessage = {
                     image: { url: ppuser },
                     caption: `@${num.split("@")[0]} Leaving From ${metadata.subject}`,
@@ -170,7 +170,7 @@ async function startsatria() {
                     buttons: buttons,
                     headerType: 5
                 }
-                    satria.sendMessage(anu.id, buttonMessage)
+                    satria.sendMessage(anu.id, buttonMessage, { mentions: anu.participants })
                 }
             }
         } catch (err) {
